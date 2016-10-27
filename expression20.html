@@ -1,0 +1,836 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>3D CAM ASSESSMENT Version 4.1</title>
+<style type="text/css">
+.auto-style1 {
+	text-align: center;
+	text-indent: -.28in;
+	direction: ltr;
+	font-family: "Arial Unicode MS";
+	color: black;
+	font-size: xx-large;
+	margin-left: .4in;
+	margin-top: 3.0pt;
+	margin-bottom: 0pt;
+}
+.auto-style2 {
+	text-align: right;
+	font-size: x-large;
+}
+.auto-style3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: xx-large;
+	color: #C0C0C0;
+	background-color: #008080;
+}
+.auto-style4 {
+	font-size: xx-large;
+	color: #C0C0C0;
+	background-color: #008080;
+	padding: 6%;
+}
+.auto-style5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	text-align: center;
+	color: #C0C0C0;
+	background-color: #808080;
+	padding: 1%;
+}
+.auto-style7 {
+	font-size: xx-large;
+	padding: 6%;
+}
+.auto-style8 {
+	font-size: xx-large;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.auto-style10 {
+	text-align: center;
+	text-indent: -.28in;
+	direction: ltr;
+	font-family: "Arial Unicode MS";
+	font-size: xx-large;
+	margin-left: .4in;
+	margin-top: 3.0pt;
+	margin-bottom: 0pt;
+	background-color: #008080;
+}
+.auto-style11 {
+	color: #FFFFFF;
+	font-size: 200%;
+}
+</style>
+<meta content="blendTrans(Duration=2.0)" http-equiv="Page-Enter" />
+
+<script type="text/javascript">
+
+
+var add3 = (function () {
+    var counter3 = 0;
+    return function () {return counter3 += 1;}
+})();
+
+function myFunction(){
+	if (var1 == 1 || var2 ==1 || var3 ==1 || var13 ==1 || var14 ==1 || var15 ==1 ) {
+		document.getElementById('f3').innerHTML='Feature 3 is triggered';
+		document.getElementById('f3').style.backgroundColor='yellow';
+	}
+	if (var1 == 0 && var2 == 0 && var3 == 0 && var13 == 0 && var14 == 0 && var15 == 0 ) {
+		document.getElementById('f3').innerHTML='Feature 3 not triggered';
+		document.getElementById('f3').style.backgroundColor='#808080';
+	}
+	if (var4 == 1 || var5 ==1 || var6 ==1 || var7 ==1 || var16 ==1 || var17 ==1 ) {
+		document.getElementById('f2').innerHTML='Feature 2 is triggered';
+		document.getElementById('f2').style.backgroundColor='yellow';
+	}
+	if (var4 == 0 && var5 == 0 && var6 == 0 && var7 == 0 && var16 == 0 && var17 == 0 ) {
+		document.getElementById('f2').innerHTML='Feature 2 not triggered';
+		document.getElementById('f2').style.backgroundColor='#808080';
+	}
+
+	if (var8 == 1 || var9 ==1 || var10 ==1 || var18 ==1 || var19 ==1 || var20 ==1 || var21 ==1 || var22 ==1 ) {
+		document.getElementById('f1').innerHTML='Feature 1 is triggered';
+		document.getElementById('f1').style.backgroundColor='yellow';
+	}
+	if (var8 == 0 && var9 == 0 && var10 == 0 && var18 == 0 && var19 == 0 && var20 == 0 && var21 == 0 && var22 == 0 ) {
+		document.getElementById('f1').innerHTML='Feature 1 not triggered';
+		document.getElementById('f1').style.backgroundColor='#808080';
+	}
+	if (var11a == 1 || var11b ==1 || var12 ==1 ) {
+		document.getElementById('f4').innerHTML='Feature 4 is triggered';
+		document.getElementById('f4').style.backgroundColor='yellow';
+	}
+	if (var11a == 0 && var11b == 0 && var12 == 0 ) {
+		document.getElementById('f4').innerHTML='Feature 4 not triggered';
+		document.getElementById('f4').style.backgroundColor='#808080';
+	}
+	
+	if (((var11a == 1 || var11b ==1 || var12 ==1 ) || (var1 == 1 || var2 ==1 || var3 ==1 || var13 ==1 || var14 ==1 || var15 ==1 )) && (var4 == 1 || var5 ==1 || var6 ==1 || var7 ==1 || var16 ==1 || var17 ==1 ) && (var8 == 1 || var9 ==1 || var10 ==1 || var18 ==1 || var19 ==1 || var20 ==1 || var21 ==1 || var22 ==1 )) {
+		document.getElementById('present').innerHTML='PRESENT';
+	}
+	
+}
+
+
+</script>
+
+
+</head>
+
+<body onclick='myFunction();' onload="document.getElementById('2').style.display='none'; document.getElementById('3').style.display='none'; document.getElementById('4').style.display='none'; document.getElementById('5').style.display='none'; document.getElementById('6').style.display='none'; document.getElementById('7').style.display='none'; document.getElementById('8').style.display='none'; document.getElementById('9').style.display='none'; document.getElementById('10').style.display='none'; document.getElementById('11').style.display='none'; document.getElementById('12').style.display='none'; document.getElementById('13').style.display='none'; document.getElementById('14').style.display='none'; document.getElementById('15').style.display='none'; document.getElementById('16').style.display='none'; document.getElementById('17').style.display='none'; document.getElementById('18').style.display='none'; document.getElementById('19').style.display='none'; document.getElementById('20').style.display='none'; document.getElementById('21').style.display='none'; document.getElementById('22').style.display='none'; document.getElementById('23').style.display='none'; document.getElementById('24').style.display='none'; document.getElementById('25').style.display='none'; document.getElementById('26').style.display='none'; " style="font-family:Arial, Helvetica, sans-serif">
+
+
+<div id="1" style="margin:12%"  onclick="document.getElementById('2').style.display='block'; document.getElementById('1').style.display='none';">
+<p class="auto-style10" style="margin: 0%;  unicode-bidi: embed;        vertical-align: middle;">
+<span class="auto-style11">3D CAM ASSESSMENT</span><br class="auto-style11" /></p>
+	<p class="auto-style8">
+<em>READ: </em>I have some questions about your thinking and memory...
+ </p>
+<form method="post">
+	<p style=" margin-top:0pt;margin-bottom:0pt;margin-left:0in;
+text-align:center;direction:ltr;unicode-bidi:embed;">
+	<span style="font-size:8.0pt;
+color:#438086;">[CAM Copyright 2003, Hospital Elder Life Program, LLC. 
+	Not to be reproduced without permission] Version 4.1</span><span style="font-size:8.0pt;color:#438086;"> </span></p>
+</form>
+<p>&nbsp;</p>
+</div>
+
+<div id="questions">
+
+
+
+<div id="2" >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('2').style.display='none'; document.getElementById('1').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;       vertical-align: middle;"  onclick="document.getElementById('2').style.display='none'; document.getElementById('1').style.display='block';">
+
+1. Please tell me the year we are in right now. <br />
+<em>
+</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var1 = 0; document.getElementById('3').style.display = 'block'; document.getElementById('2').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var1 = 1; document.getElementById('3').style.display = 'block'; document.getElementById('2').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="3"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('3').style.display='none'; document.getElementById('2').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('3').style.display='none'; document.getElementById('2').style.display='block'; ">
+2. Please tell me the day of the week.  <br />
+<em>
+</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var2 = 0; document.getElementById('4').style.display = 'block'; document.getElementById('3').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var2 = 1; document.getElementById('4').style.display = 'block'; document.getElementById('3').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+
+
+<div id="4"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('4').style.display='none'; document.getElementById('3').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('4').style.display='none'; document.getElementById('3').style.display='block'; " >
+3. Please tell me what type of place is this?<br />
+<em>[hospital]
+</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var3 = 0; document.getElementById('5').style.display = 'block'; document.getElementById('4').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var3 = 1; document.getElementById('5').style.display = 'block'; document.getElementById('4').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="5"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('5').style.display='none'; document.getElementById('4').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('5').style.display='none'; document.getElementById('4').style.display='block'; " >
+4. I am going to read some numbers. I want you to repeat them in backwards order from the way I read them to you. For instance, if I say “5 – 2”, you would say “2 -5”. OK? The first one is "7-5-1" (1-5-7). <br />
+<em>Say digits one per second.</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var4 = 0; document.getElementById('6').style.display = 'block'; document.getElementById('5').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var4 = 1; document.getElementById('6').style.display = 'block'; document.getElementById('5').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="6"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('6').style.display='none'; document.getElementById('5').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('6').style.display='none'; document.getElementById('5').style.display='block'; ">
+5. The second is "8-2-4-3" (3-4-2-8). <br />
+<em>
+</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var5 = 0; document.getElementById('7').style.display = 'block'; document.getElementById('6').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var5 = 1; document.getElementById('7').style.display = 'block'; document.getElementById('6').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="7"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('7').style.display='none'; document.getElementById('6').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('7').style.display='none'; document.getElementById('6').style.display='block'; ">
+6. Please tell me the days of the week backwards, starting with Saturday.<br />
+<em>[S,F,T,W,T,M,S] may prompt with “what is day before ….” for up to 2 prompts.</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var6 = 0; document.getElementById('8').style.display = 'block'; document.getElementById('7').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var6 = 1; document.getElementById('8').style.display = 'block'; document.getElementById('7').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="8"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('8').style.display='none'; document.getElementById('7').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('8').style.display='none'; document.getElementById('7').style.display='block'; ">
+7. Please tell me the months of the year backwards, starting with December.<br />
+<em>[D,N,O,S,A,J,J,M,A,M,F,J] may prompt with “what is month before ….” for up to 2 prompts.</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var7 = 0; document.getElementById('9').style.display = 'block'; document.getElementById('8').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var7 = 1; document.getElementById('9').style.display = 'block'; document.getElementById('8').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+
+<div id="9"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('9').style.display='none'; document.getElementById('8').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('9').style.display='none'; document.getElementById('8').style.display='block'; ">
+8. During the past day have you felt confused? <br />
+<em>About basic info (i.e. orientation, reason for hospitalization) not details of medical condition/treatment.
+</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var8 = 0; document.getElementById('10').style.display = 'block'; document.getElementById('9').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var8 = 1; document.getElementById('10').style.display = 'block'; document.getElementById('9').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="10"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('10').style.display='none'; document.getElementById('9').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('10').style.display='none'; document.getElementById('9').style.display='block'; ">
+9. During the past day did you think that you were not really in the hospital?<br />
+<em></em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var9 = 0; document.getElementById('11').style.display = 'block'; document.getElementById('10').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var9 = 1; document.getElementById('11').style.display = 'block'; document.getElementById('10').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="11"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('11').style.display='none'; document.getElementById('10').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('11').style.display='none'; document.getElementById('10').style.display='block'; ">
+10. During the past day did you see things that were not really there? <br />
+<em>
+</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var10 = 0; document.getElementById('12').style.display = 'block'; document.getElementById('11').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var10 = 1; document.getElementById('12').style.display = 'block'; document.getElementById('11').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="12"   onclick="document.getElementById('13').style.display = 'block'; document.getElementById('12').style.display = 'none';">
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('12').style.display='none'; document.getElementById('11').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('13').style.display='none'; document.getElementById('12').style.display='block'; ">
+Thank you<br /></p>
+<p><em>End of patient questions.  Please swipe to advance to ratings.
+
+</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+</div>
+
+<div id="13"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('13').style.display='none'; document.getElementById('12').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+11A. Was the patient sleepy during the interview?<br />
+<em>(requires that he/she actually falls asleep, but is easy to arouse)</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var11a = 0; document.getElementById('14').style.display = 'block'; document.getElementById('13').style.display = 'none';" /></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var11a = 1; document.getElementById('14').style.display = 'block'; document.getElementById('13').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="14"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('14').style.display='none'; document.getElementById('13').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+11B. Was the patient stuporous, or comatose during the interview?<br />
+<em>(he/she is difficult to impossible to arouse)
+</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var11b = 0; document.getElementById('15').style.display = 'block'; document.getElementById('14').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var11b = 1; document.getElementById('15').style.display = 'block'; document.getElementById('14').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="15"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('15').style.display='none'; document.getElementById('14').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+12.Did the patient show hypervigilance? <br />
+<em>(having excessively strong responses to ordinary objects/stimuli in the environment, being inappropriately startled)</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var12 = 0; document.getElementById('16').style.display = 'block'; document.getElementById('15').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var12 = 1; document.getElementById('16').style.display = 'block'; document.getElementById('15').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="16"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('16').style.display='none'; document.getElementById('15').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+13. Was the patient's flow of ideas unclear or illogical? <br />
+<em>(nonsensical speech, inappropriate answers to questions, contradictory statements or shifting unpredictably from subject to subject)
+</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var13 = 0; document.getElementById('17').style.display = 'block'; document.getElementById('16').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var13 = 0; document.getElementById('17').style.display = 'block'; document.getElementById('16').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="17"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('17').style.display='none'; document.getElementById('16').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+14. Was the patient's conversation rambling, inappropriately verbose, or tangential?<br />
+<em>(off-target responses or telling a story unrelated to the interview)</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var14 = 0; document.getElementById('18').style.display = 'block'; document.getElementById('17').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var14 = 1; document.getElementById('18').style.display = 'block'; document.getElementById('17').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="18"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('18').style.display='none'; document.getElementById('17').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+15. Was the patient's speech unusually limited or sparse? <br />
+<em>(inappropriately brief or stereotyped answers)</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var15 = 0; document.getElementById('19').style.display = 'block'; document.getElementById('18').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var15 = 1; document.getElementById('19').style.display = 'block'; document.getElementById('18').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="19"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('19').style.display='none'; document.getElementById('18').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+16. Did the patient have trouble keeping track of what was being said during the interview?<br />
+<em>(repeatedly asking the interviewer to repeat questions)</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var16 = 0; document.getElementById('20').style.display = 'block'; document.getElementById('19').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var16 = 1; document.getElementById('20').style.display = 'block'; document.getElementById('19').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="20"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('20').style.display='none'; document.getElementById('19').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+17. Did the patient appear inappropriately distracted by environmental stimuli? <br />
+<em>(such as television, people outside the room, roommate's conversations)
+</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var17 = 0; document.getElementById('21').style.display = 'block'; document.getElementById('20').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var17 = 1; document.getElementById('21').style.display = 'block'; document.getElementById('20').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="21"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('21').style.display='none'; document.getElementById('20').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+18. Did the patient's level of consciousness fluctuate during the interview? <br />
+<em>(frequently falling asleep for part of the interview, but wide awake for part of the interview)
+</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var18 = 0; document.getElementById('22').style.display = 'block'; document.getElementById('21').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var18 = 1; document.getElementById('22').style.display = 'block'; document.getElementById('21').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="22"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('22').style.display='none'; document.getElementById('21').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+19. Did the patient's level of attention fluctuate during the interview? <br />
+<em>(very inattentive for part of the interview, but attentive for part of the interview--Note: just getting some questions correct and others incorrect is insufficient to code this feature)
+</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var19 = 0; document.getElementById('23').style.display = 'block'; document.getElementById('22').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var19 = 1; document.getElementById('23').style.display = 'block'; document.getElementById('22').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="23"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('23').style.display='none'; document.getElementById('22').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+20. Did the patient's speech/thinking fluctuate during the interview? <br />
+<em>(speaks very slowly during part of the interview then very fast, or speech was coherent for part of the interview and then nonsensical)
+</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var20 = 0; document.getElementById('24').style.display = 'block'; document.getElementById('23').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var20 = 1; document.getElementById('24').style.display = 'block'; document.getElementById('23').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="24"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('24').style.display='none'; document.getElementById('23').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+21. Consult the medical record or contact a family member, friend, or health care provider who knows the patient well to find out if the patient is experiencing an acute change. "Is the patient experiencing an acute change in their memory or thinking?”<br />
+<em>
+</em> </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var21 = 0; document.getElementById('25').style.display = 'block'; document.getElementById('24').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var21 = 1; document.getElementById('25').style.display = 'block'; document.getElementById('24').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="25"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('25').style.display='none'; document.getElementById('24').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+<em>IF SECOND DAY OF HOSPITALIZATION OR LATER AND PREVIOUS 3D-CAM RATINGS ARE AVAILABLE</em>
+22. Review previous 3D-CAM assessments and determine if there has been an acute change in performance, based on ANY new "positive" items<br />
+ </p>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var22 = 0; document.getElementById('26').style.display = 'block'; document.getElementById('25').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var22 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('25').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="26"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('26').style.display='none'; document.getElementById('25').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+		<td class="auto-style2">Cancel</td>
+	</tr>
+</table>
+
+<p class="auto-style1" style="padding: 0%; margin: 6%;   unicode-bidi: embed;         vertical-align: middle;">
+CAM Summary <br />
+<br />DELIRIUM <span id="present">Not Present</span></p>
+<table style="width: 100%">
+	<tr>
+		<td class="auto-style5" colspan="1" id="f0">Feature summary:</td>
+		<td class="auto-style5" colspan="1" id="f1">Feature 1 not present</td>
+		<td class="auto-style5" colspan="1" id="f2">Feature 2 not present</td>
+		<td class="auto-style5" colspan="1" id="f3">Feature 3 not present</td>
+		<td class="auto-style5" colspan="1" id="f4">Feature 4 not present</td>
+	</tr>
+</table>
+
+<form method="post">
+</form>
+<p>&nbsp;</p>
+</div>
+
+
+
+
+</div>
+</body>
+
+</html>
