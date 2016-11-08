@@ -69,26 +69,6 @@
 
 <script type="text/javascript">
 
-document.getElementById('c11a2').onclick = function() {
-	var11a = 1;
-	if (var8==1 | var9 == 1 | var10 == 1) {
-		document.getElementById('26').style.display = 'block'; 
-		document.getElementById('c11a').style.display = 'none';
-	} 
-	else { 
-		document.getElementById('c18').style.display = 'block'; document.getElementById('c11a').style.display = 'none'; 
-	}
-}
-
-function f11a() {
-	if (var8==1 | var9 == 1 | var10 == 1) {
-		document.getElementById('26').style.display = 'block'; 
-		document.getElementById('c11a').style.display = 'none';
-	} 
-	else { 
-		document.getElementById('c18').style.display = 'block'; document.getElementById('c11a').style.display = 'none'; 
-	}
-}
 
 var add3 = (function () {
     var counter3 = 0;
@@ -484,7 +464,33 @@ Was the patient sleepy during the interview?<br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style4" id="c11a2" name="c11a2" style="width: 100%" type="button" value="Yes" /></td>
-		<td>&nbsp;</td>
+		
+<script>
+	document.getElementById('c11a2').onclick = function() {
+	var11a = 1;
+	if (var8==1 || var9 == 1 || var10 == 1) {
+		document.getElementById('26').style.display = 'block'; 
+		document.getElementById('c11a').style.display = 'none';
+	} 
+	else { 
+		document.getElementById('c18').style.display = 'block'; document.getElementById('c11a').style.display = 'none'; 
+	}
+	return false;
+}
+
+function f11a() {
+	if (var8==1 | var9 == 1 | var10 == 1) {
+		document.getElementById('26').style.display = 'block'; 
+		document.getElementById('c11a').style.display = 'none';
+	} 
+	else { 
+		document.getElementById('c18').style.display = 'block'; document.getElementById('c11a').style.display = 'none'; 
+	}
+	return false;
+}
+</script>
+		
+		<td><a href="#" onclick="var11a = 1; if (var8==1 | var9 == 1 | var10 == 1) {document.getElementById('26').style.display = 'block'; document.getElementById('c11a').style.display = 'none';} else {document.getElementById('c18').style.display = 'block'; document.getElementById('c11a').style.display = 'none'; } alert('Some ' + var11a + ' message');">&nbsp;</a></td>
 	</tr>
 	</table>
 </div>
@@ -510,7 +516,7 @@ Was the patient stuporous, or comatose during the interview?<br />
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var11b = 0; document.getElementById('c12').style.display = 'block'; document.getElementById('c11b').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
 		<td>
-		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var11b = 1; if (var8==1 | var9 == 1 | var10 == 1) {document.getElementById('26').style.display = 'block'; document.getElementById('c11b').style.display = 'none';} else { document.getElementById('c18').style.display = 'block'; document.getElementById('c11b').style.display = 'none'; }"/></td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var11b = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; document.getElementById('c11b').style.display = 'none';} else { document.getElementById('c18').style.display = 'block'; document.getElementById('c11b').style.display = 'none'; }"/></td>
 		<td>&nbsp;</td>
 	</tr>
 	</table>
@@ -533,10 +539,10 @@ Did the patient show hypervigilance? <br />
 	<tr>
 		<td>&nbsp;</td>
 		<td>
-		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var12 = 0; if (var8==1 | var9 == 1 | var10 == 1) {document.getElementById('26').style.display = 'block'; document.getElementById('c12').style.display = 'none';} else { document.getElementById('c18').style.display = 'block'; document.getElementById('c12').style.display = 'none'; }"/></td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var12 = 0; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; document.getElementById('c12').style.display = 'none';} else { document.getElementById('c18').style.display = 'block'; document.getElementById('c12').style.display = 'none'; }"/></td>
 		<td>&nbsp;</td>
 		<td>
-		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var12 = 1; if (var8==1 | var9 == 1 | var10 == 1) {document.getElementById('26').style.display = 'block'; document.getElementById('c12').style.display = 'none';} else { document.getElementById('c18').style.display = 'block'; document.getElementById('c12').style.display = 'none'; }"/></td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var12 = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; document.getElementById('c12').style.display = 'none';} else { document.getElementById('c18').style.display = 'block'; document.getElementById('c12').style.display = 'none'; }"/></td>
 		<td>&nbsp;</td>
 	</tr>
 	</table>
