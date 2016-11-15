@@ -100,7 +100,7 @@ var add3 = (function () {
 
 function myFunction(){
 	if (var7 == 1 || var2 == 1) {
-		document.getElementById('apresent').innerHTML='POSITIVE on initial screening.<br /><br /><em onclick="location.reload();">Please notify the nurse or attending hospitalist that the patient has screened positive for delirium.</em>';
+		document.getElementById('apresent').innerHTML='POSITIVE on initial screening.<br /><br /><em onclick="location.reload(true);">Please notify the nurse or attending hospitalist that the patient has screened positive for delirium.</em>';
 		document.getElementById('bpresent').innerHTML='POSITIVE on initial screening.<br /><br /><p onclick="document.getElementById(\'bconfirmation\').style.display=\'none\'; document.getElementById(\'2\').style.display=\'block\';"><em>Please click here to proceed to the full 3DCAM questionnaire. </em></p>';
 		document.getElementById('cpresent').innerHTML='POSITIVE on initial screening.<br /><br /><p onclick="document.getElementById(\'cconfirmation\').style.display=\'none\'; if (var2==1 && var7==1) {document.getElementById(\'c8\').style.display=\'block\'} else if (var2==1 && var7==0) {document.getElementById(\'c4\').style.display=\'block\'} else if (var2==0 && var7==1) {document.getElementById(\'c1\').style.display=\'block\'} "><em>Please click here to proceed to the full 3DCAM questionnaire. </em></p>'
 		;
@@ -179,7 +179,7 @@ function myFunction(){
 		<tr style="height:25px"><td></td></tr>
 		<tr><td><button name="Cbutton1" style="font-size:xx-large" onclick="document.getElementById('c2').style.display='block'; document.getElementById('contents').style.display='none'">C. Hospitalist/Nurse Interview including skip patterns</button></td></tr>
 </table>
-	</div>	
+</div>	
 
 
 <div id="c2"  >
@@ -198,7 +198,7 @@ Please tell me the day of the week.  <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var2 = 0; document.getElementById('c7').style.display = 'block'; document.getElementById('c2').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var2 = 1; document.getElementById('c7').style.display = 'block'; document.getElementById('c2').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -223,10 +223,10 @@ Please tell me the months of the year backwards, starting with December.<br />
 	<tr>
 		<td>&nbsp;</td>
 		<td>
-		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var7 = 0; document.getElementById('cconfirmation').style.display = 'block'; document.getElementById('c7').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var7 = 0; if (var2==0) {document.getElementById('cconfirmation').style.display = 'block';} else {document.getElementById('c4').style.display = 'block';} document.getElementById('c7').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
-		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var7 = 1; document.getElementById('cconfirmation').style.display = 'block'; document.getElementById('c7').style.display = 'none';"/></td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var7 = 1; if (var2==1) {document.getElementById('c8').style.display = 'block';} else {document.getElementById('c1').style.display = 'block';}  document.getElementById('c7').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
 	</tr>
 	</table>
@@ -258,7 +258,7 @@ Please tell me the year we are in right now. <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var1 = 0; document.getElementById('c3').style.display = 'block'; document.getElementById('c1').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var1 = 1; if (var7==1) {document.getElementById('c8').style.display = 'block';} else {document.getElementById('c4').style.display = 'block';} document.getElementById('c1').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -285,7 +285,7 @@ Please tell me what type of place is this?<br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var3 = 0; document.getElementById('c8').style.display = 'block'; document.getElementById('c3').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var3 = 1; document.getElementById('c8').style.display = 'block'; document.getElementById('c3').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -311,7 +311,7 @@ I'm going to read some numbers. I want you to repeat them in backwards order fro
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var4 = 0; document.getElementById('c5').style.display = 'block'; document.getElementById('c4').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var4 = 1; document.getElementById('c8').style.display = 'block'; document.getElementById('c4').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -338,7 +338,7 @@ The second is "8-2-4-3" (3-4-2-8). <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var5 = 0; document.getElementById('c6').style.display = 'block'; document.getElementById('c5').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var5 = 1; document.getElementById('c8').style.display = 'block'; document.getElementById('c5').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -364,7 +364,7 @@ Please tell me the days of the week backwards, starting with Saturday.<br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var6 = 0; document.getElementById('c8').style.display = 'block'; document.getElementById('c6').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var6 = 1; document.getElementById('c8').style.display = 'block'; document.getElementById('c6').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -391,7 +391,7 @@ During the past day have you felt confused? <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var8 = 0; document.getElementById('c9').style.display = 'block'; document.getElementById('c8').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var8 = 1; if ((var1==1 || var2==1 || var3==1) && (var4==1 || var5==1 || var6==1 || var7==1)) {document.getElementById('26').style.display = 'block';} else if (var1==1 || var2==1 || var3==1) {document.getElementById('c16').style.display = 'block';} else if (var4==1 || var5==1 || var6==1 || var7==1) {document.getElementById('c10a').style.display = 'block';} document.getElementById('c8').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -417,7 +417,7 @@ During the past day did you think that you were not really in the hospital?<br /
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var9 = 0; document.getElementById('c10').style.display = 'block'; document.getElementById('c9').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var9 = 1; if ((var1==1 || var2==1 || var3==1) && (var4==1 || var5==1 || var6==1 || var7==1)) {document.getElementById('26').style.display = 'block';} else if (var1==1 || var2==1 || var3==1) {document.getElementById('c16').style.display = 'block';} else if (var4==1 || var5==1 || var6==1 || var7==1) {document.getElementById('c10a').style.display = 'block';} document.getElementById('c9').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -444,7 +444,7 @@ During the past day did you think that you were not really in the hospital?<br /
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var10 = 0; if (var1==1 || var2==1 || var3==1) {document.getElementById('c16').style.display = 'block';} else {document.getElementById('c10a').style.display = 'block';} document.getElementById('c10').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var10 = 1; document.getElementById('c10a').style.display = 'block'; document.getElementById('c10').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -483,7 +483,7 @@ Was the patient sleepy during the interview?<br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var11a = 0; document.getElementById('c11b').style.display = 'block'; document.getElementById('c11a').style.display = 'none';" /></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" id="c11a2" name="c11a2" style="width: 100%" type="button" value="Yes" /></td>
 		
@@ -525,7 +525,7 @@ Was the patient stuporous, or comatose during the interview?<br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var11b = 0; document.getElementById('c12').style.display = 'block'; document.getElementById('c11b').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var11b = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; document.getElementById('c11b').style.display = 'none';} else { document.getElementById('c18').style.display = 'block'; document.getElementById('c11b').style.display = 'none'; }"/></td>
 		<td>&nbsp;</td>
@@ -551,7 +551,7 @@ Did the patient show hypervigilance? <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var12 = 0; document.getElementById('c13').style.display = 'block'; document.getElementById('c12').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var12 = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; document.getElementById('c12').style.display = 'none';} else { document.getElementById('c18').style.display = 'block'; document.getElementById('c12').style.display = 'none'; }"/></td>
 		<td>&nbsp;</td>
@@ -578,7 +578,7 @@ Was the patient's flow of ideas unclear or illogical? <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var13 = 0; document.getElementById('c14').style.display = 'block'; document.getElementById('c13').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var13 = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; } else { document.getElementById('c18').style.display = 'block';  } document.getElementById('c13').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -604,7 +604,7 @@ Was the patient's conversation rambling, inappropriately verbose, or tangential?
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var14 = 0; document.getElementById('c15').style.display = 'block'; document.getElementById('c14').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var14 = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; } else { document.getElementById('c18').style.display = 'block';  } document.getElementById('c14').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -630,7 +630,7 @@ Was the patient's speech unusually limited or sparse? <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var15 = 0; document.getElementById('26').style.display = 'block'; document.getElementById('c15').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var15 = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; } else { document.getElementById('c18').style.display = 'block';  } document.getElementById('c15').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -656,7 +656,7 @@ Did the patient have trouble keeping track of what was being said during the int
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var16 = 0; document.getElementById('c17').style.display = 'block'; document.getElementById('c16').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var16 = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; } else { document.getElementById('c18').style.display = 'block';  } document.getElementById('c16').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -683,7 +683,7 @@ Did the patient appear inappropriately distracted by environmental stimuli? <br 
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var17 = 0; document.getElementById('26').style.display = 'block'; document.getElementById('c17').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var17 = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; } else { document.getElementById('c18').style.display = 'block';  } document.getElementById('c17').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -711,7 +711,7 @@ Did the patient's level of consciousness fluctuate during the interview? <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var18 = 0; document.getElementById('c19').style.display = 'block'; document.getElementById('c18').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var18 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('c18').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -738,7 +738,7 @@ Did the patient's level of attention fluctuate during the interview? <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var19 = 0; document.getElementById('c20').style.display = 'block'; document.getElementById('c19').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var19 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('c19').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -765,7 +765,7 @@ Did the patient's speech/thinking fluctuate during the interview? <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var20 = 0; document.getElementById('c21').style.display = 'block'; document.getElementById('c20').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var20 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('c20').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -792,7 +792,7 @@ Consult the medical record or contact a family member, friend, or health care pr
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var21 = 0; document.getElementById('c22').style.display = 'block'; document.getElementById('c21').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var21 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('c21').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -819,7 +819,7 @@ Review previous 3D-CAM assessments and determine if there has been an acute chan
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var22 = 0; document.getElementById('26').style.display = 'block'; document.getElementById('c22').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var22 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('c22').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -848,7 +848,7 @@ Please tell me the day of the week.  <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var2 = 0; document.getElementById('a8').style.display = 'block'; document.getElementById('a3').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var2 = 1; document.getElementById('a8').style.display = 'block'; document.getElementById('a3').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -872,7 +872,7 @@ Please tell me the months of the year backwards, starting with December.<br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var7 = 0; document.getElementById('aconfirmation').style.display = 'block'; document.getElementById('a8').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var7 = 1; document.getElementById('aconfirmation').style.display = 'block'; document.getElementById('a8').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -883,7 +883,7 @@ Please tell me the months of the year backwards, starting with December.<br />
 <div id="aconfirmation">
 <p class="auto-style1" style="padding: 0%; margin: 6%;   unicode-bidi: embed;         vertical-align: middle;">
 CAM Summary <br />
-<br />DELIRIUM <span id="apresent">Negative<br /><br /><em onclick="location.reload();">You may exit the application.</em></span></p>
+<br />DELIRIUM <span id="apresent">Negative<br /><br /><em onclick="location.reload(true);">You may exit the application.</em></span></p>
 </div>
 
 
@@ -907,7 +907,7 @@ Please tell me the day of the week.  <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var2 = 0; document.getElementById('8').style.display = 'block'; document.getElementById('3').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var2 = 1; document.getElementById('8').style.display = 'block'; document.getElementById('3').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -932,10 +932,10 @@ Please tell me the months of the year backwards, starting with December.<br />
 	<tr>
 		<td>&nbsp;</td>
 		<td>
-		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var7 = 0; document.getElementById('bconfirmation').style.display = 'block'; document.getElementById('8').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var7 = 0; if (var2==0) {document.getElementById('bconfirmation').style.display = 'block';} else {document.getElementById('2').style.display = 'block';}  document.getElementById('8').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
-		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var7 = 1; document.getElementById('bconfirmation').style.display = 'block'; document.getElementById('8').style.display = 'none';"/></td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var7 = 1; document.getElementById('2').style.display = 'block'; document.getElementById('8').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
 	</tr>
 	</table>
@@ -967,7 +967,7 @@ Please tell me the year we are in right now. <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var1 = 0; document.getElementById('4').style.display = 'block'; document.getElementById('2').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var1 = 1; document.getElementById('4').style.display = 'block'; document.getElementById('2').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -994,7 +994,7 @@ Please tell me what type of place is this?<br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var3 = 0; document.getElementById('5').style.display = 'block'; document.getElementById('4').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var3 = 1; document.getElementById('5').style.display = 'block'; document.getElementById('4').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1020,7 +1020,7 @@ I am going to read some numbers. I want you to repeat them in backwards order fr
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var4 = 0; document.getElementById('6').style.display = 'block'; document.getElementById('5').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var4 = 1; document.getElementById('6').style.display = 'block'; document.getElementById('5').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1047,7 +1047,7 @@ The second is "8-2-4-3" (3-4-2-8). <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var5 = 0; document.getElementById('7').style.display = 'block'; document.getElementById('6').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var5 = 1; document.getElementById('7').style.display = 'block'; document.getElementById('6').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1073,7 +1073,7 @@ Please tell me the days of the week backwards, starting with Saturday.<br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var6 = 0; document.getElementById('9').style.display = 'block'; document.getElementById('7').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var6 = 1; document.getElementById('9').style.display = 'block'; document.getElementById('7').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1100,7 +1100,7 @@ During the past day have you felt confused? <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var8 = 0; document.getElementById('10').style.display = 'block'; document.getElementById('9').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var8 = 1; document.getElementById('10').style.display = 'block'; document.getElementById('9').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1126,7 +1126,7 @@ During the past day did you think that you were not really in the hospital?<br /
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var9 = 0; document.getElementById('11').style.display = 'block'; document.getElementById('10').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var9 = 1; document.getElementById('11').style.display = 'block'; document.getElementById('10').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1153,7 +1153,7 @@ During the past day did you think that you were not really in the hospital?<br /
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var10 = 0; document.getElementById('12').style.display = 'block'; document.getElementById('11').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var10 = 1; document.getElementById('12').style.display = 'block'; document.getElementById('11').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1192,7 +1192,7 @@ Was the patient sleepy during the interview?<br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var11a = 0; document.getElementById('14').style.display = 'block'; document.getElementById('13').style.display = 'none';" /></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var11a = 1; document.getElementById('14').style.display = 'block'; document.getElementById('13').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1219,7 +1219,7 @@ Was the patient stuporous, or comatose during the interview?<br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var11b = 0; document.getElementById('15').style.display = 'block'; document.getElementById('14').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var11b = 1; document.getElementById('15').style.display = 'block'; document.getElementById('14').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1245,7 +1245,7 @@ Did the patient show hypervigilance? <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var12 = 0; document.getElementById('16').style.display = 'block'; document.getElementById('15').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var12 = 1; document.getElementById('16').style.display = 'block'; document.getElementById('15').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1272,7 +1272,7 @@ Was the patient's flow of ideas unclear or illogical? <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var13 = 0; document.getElementById('17').style.display = 'block'; document.getElementById('16').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var13 = 0; document.getElementById('17').style.display = 'block'; document.getElementById('16').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1298,7 +1298,7 @@ Was the patient's conversation rambling, inappropriately verbose, or tangential?
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var14 = 0; document.getElementById('18').style.display = 'block'; document.getElementById('17').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var14 = 1; document.getElementById('18').style.display = 'block'; document.getElementById('17').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1324,7 +1324,7 @@ Was the patient's speech unusually limited or sparse? <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var15 = 0; document.getElementById('19').style.display = 'block'; document.getElementById('18').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var15 = 1; document.getElementById('19').style.display = 'block'; document.getElementById('18').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1350,7 +1350,7 @@ Did the patient have trouble keeping track of what was being said during the int
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var16 = 0; document.getElementById('20').style.display = 'block'; document.getElementById('19').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var16 = 1; document.getElementById('20').style.display = 'block'; document.getElementById('19').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1377,7 +1377,7 @@ Did the patient appear inappropriately distracted by environmental stimuli? <br 
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var17 = 0; document.getElementById('21').style.display = 'block'; document.getElementById('20').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var17 = 1; document.getElementById('21').style.display = 'block'; document.getElementById('20').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1404,7 +1404,7 @@ Did the patient's level of consciousness fluctuate during the interview? <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var18 = 0; document.getElementById('22').style.display = 'block'; document.getElementById('21').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var18 = 1; document.getElementById('22').style.display = 'block'; document.getElementById('21').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1431,7 +1431,7 @@ Did the patient's level of attention fluctuate during the interview? <br />
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var19 = 0; document.getElementById('23').style.display = 'block'; document.getElementById('22').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var19 = 1; document.getElementById('23').style.display = 'block'; document.getElementById('22').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
@@ -1457,10 +1457,10 @@ Did the patient's speech/thinking fluctuate during the interview? <br />
 	<tr>
 		<td>&nbsp;</td>
 		<td>
-		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var20 = 0; document.getElementById('24').style.display = 'block'; document.getElementById('23').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var20 = 0; if (var8 == 1 || var9 ==1 || var10 ==1 || var18 ==1 || var19 ==1) {document.getElementById('26').style.display = 'block';} else {document.getElementById('24').style.display = 'block';} document.getElementById('23').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
-		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var20 = 1; document.getElementById('24').style.display = 'block'; document.getElementById('23').style.display = 'none';"/></td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var20 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('23').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
 	</tr>
 	</table>
@@ -1485,9 +1485,9 @@ Consult the medical record or contact a family member, friend, or health care pr
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var21 = 0; document.getElementById('25').style.display = 'block'; document.getElementById('24').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
-		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var21 = 1; document.getElementById('25').style.display = 'block'; document.getElementById('24').style.display = 'none';"/></td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var21 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('24').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
 	</tr>
 	</table>
@@ -1501,7 +1501,7 @@ Consult the medical record or contact a family member, friend, or health care pr
 	</tr>
 </table>
 <p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
-<div><em>IF SECOND DAY OF HOSPITALIZATION OR LATER AND PREVIOUS 3D-CAM RATINGS ARE AVAILABLE</em></div>
+<em>IF SECOND DAY OF HOSPITALIZATION OR LATER AND PREVIOUS 3D-CAM RATINGS ARE AVAILABLE</em><br />
 Review previous 3D-CAM assessments and determine if there has been an acute change in performance, based on ANY new "positive" items<br />
  </p>
 <form method="post">
@@ -1512,7 +1512,7 @@ Review previous 3D-CAM assessments and determine if there has been an acute chan
 		<td>&nbsp;</td>
 		<td>
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var22 = 0; document.getElementById('26').style.display = 'block'; document.getElementById('25').style.display = 'none';"/></td>
-		<td>&nbsp;</td>
+		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var22 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('25').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
