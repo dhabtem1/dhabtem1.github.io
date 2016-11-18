@@ -69,6 +69,8 @@
 
 <script type="text/javascript">
 
+day=0;
+
 var1=0;
 var2=0;
 var3=0;
@@ -153,10 +155,10 @@ function myFunction(){
 </head>
 
 <body onclick='myFunction();' 
-	onload="document.getElementById('2').style.display='none'; document.getElementById('3').style.display='none'; document.getElementById('4').style.display='none'; document.getElementById('5').style.display='none'; document.getElementById('6').style.display='none'; document.getElementById('7').style.display='none'; document.getElementById('8').style.display='none'; document.getElementById('9').style.display='none'; document.getElementById('10').style.display='none'; document.getElementById('11').style.display='none'; document.getElementById('12').style.display='none'; document.getElementById('13').style.display='none'; document.getElementById('14').style.display='none'; document.getElementById('15').style.display='none'; document.getElementById('16').style.display='none'; document.getElementById('17').style.display='none'; document.getElementById('18').style.display='none'; document.getElementById('19').style.display='none'; document.getElementById('20').style.display='none'; document.getElementById('21').style.display='none'; document.getElementById('22').style.display='none'; document.getElementById('23').style.display='none'; document.getElementById('24').style.display='none'; document.getElementById('25').style.display='none'; document.getElementById('26').style.display='none'; document.getElementById('contents').style.display='none';  document.getElementById('a3').style.display='none'; document.getElementById('a8').style.display='none'; document.getElementById('aconfirmation').style.display='none'; document.getElementById('bconfirmation').style.display='none'; document.getElementById('c2').style.display='none'; document.getElementById('c7').style.display='none'; document.getElementById('cconfirmation').style.display='none'; document.getElementById('c1').style.display='none'; document.getElementById('c3').style.display='none'; document.getElementById('c4').style.display='none'; document.getElementById('c5').style.display='none'; document.getElementById('c6').style.display='none'; document.getElementById('c8').style.display='none'; document.getElementById('c9').style.display='none'; document.getElementById('c10').style.display='none'; document.getElementById('c10a').style.display='none'; document.getElementById('c11a').style.display='none'; document.getElementById('c11b').style.display='none'; document.getElementById('c12').style.display='none'; document.getElementById('c13').style.display='none'; document.getElementById('c14').style.display='none'; document.getElementById('c15').style.display='none'; document.getElementById('c16').style.display='none'; document.getElementById('c17').style.display='none'; document.getElementById('c18').style.display='none'; document.getElementById('c19').style.display='none'; document.getElementById('c20').style.display='none'; document.getElementById('c21').style.display='none'; document.getElementById('c22').style.display='none'; " 
+	onload="document.getElementById('2').style.display='none'; document.getElementById('3').style.display='none'; document.getElementById('4').style.display='none'; document.getElementById('5').style.display='none'; document.getElementById('6').style.display='none'; document.getElementById('7').style.display='none'; document.getElementById('8').style.display='none'; document.getElementById('9').style.display='none'; document.getElementById('10').style.display='none'; document.getElementById('11').style.display='none'; document.getElementById('12').style.display='none'; document.getElementById('13').style.display='none'; document.getElementById('14').style.display='none'; document.getElementById('15').style.display='none'; document.getElementById('16').style.display='none'; document.getElementById('17').style.display='none'; document.getElementById('18').style.display='none'; document.getElementById('19').style.display='none'; document.getElementById('20').style.display='none'; document.getElementById('21').style.display='none'; document.getElementById('22').style.display='none'; document.getElementById('23').style.display='none'; document.getElementById('24').style.display='none'; document.getElementById('25').style.display='none'; document.getElementById('26').style.display='none'; document.getElementById('contents').style.display='none';  document.getElementById('a3').style.display='none'; document.getElementById('a8').style.display='none'; document.getElementById('aconfirmation').style.display='none'; document.getElementById('bconfirmation').style.display='none'; document.getElementById('c2').style.display='none'; document.getElementById('c7').style.display='none'; document.getElementById('cconfirmation').style.display='none'; document.getElementById('c1').style.display='none'; document.getElementById('c3').style.display='none'; document.getElementById('c4').style.display='none'; document.getElementById('c5').style.display='none'; document.getElementById('c6').style.display='none'; document.getElementById('c8').style.display='none'; document.getElementById('c9').style.display='none'; document.getElementById('c10').style.display='none'; document.getElementById('c10a').style.display='none'; document.getElementById('c11a').style.display='none'; document.getElementById('c11b').style.display='none'; document.getElementById('c12').style.display='none'; document.getElementById('c13').style.display='none'; document.getElementById('c14').style.display='none'; document.getElementById('c15').style.display='none'; document.getElementById('c16').style.display='none'; document.getElementById('c17').style.display='none'; document.getElementById('c18').style.display='none'; document.getElementById('c19').style.display='none'; document.getElementById('c20').style.display='none'; document.getElementById('c21').style.display='none'; document.getElementById('c22').style.display='none'; document.getElementById('contents1').style.display='none'; " 
 	style="font-family:Arial, Helvetica, sans-serif">
 
-<div id="1" style="margin:12%"  onclick="document.getElementById('contents').style.display='block'; document.getElementById('1').style.display='none';">
+<div id="1" style="margin:12%"  onclick="document.getElementById('contents1').style.display='block'; document.getElementById('1').style.display='none';">
 <p class="auto-style10" style="margin: 0%;  unicode-bidi: embed;        vertical-align: middle;">
 <span class="auto-style11">DELIRIUM SCREENING ASSESSMENT</span><br class="auto-style11" /></p>
 	<p class="auto-style8">
@@ -169,6 +171,16 @@ function myFunction(){
 </div>
 
 <div id="questions">
+
+<div id="contents1" >
+	<table >
+		<tr style="font-size:xx-large"><td><em>On which interview day is this assessment taking place?</em></td></tr>
+		<tr style="height:25px"><td></td></tr>
+		<tr><td><button name="Abutton1" style="font-size:xx-large" onclick="day = 1; document.getElementById('contents').style.display='block'; document.getElementById('contents1').style.display='none'">Day 1</button></td></tr>
+		<tr style="height:25px"><td></td></tr>
+		<tr><td><button name="Bbutton1" style="font-size:xx-large" onclick="day = 2; document.getElementById('contents').style.display='block'; document.getElementById('contents1').style.display='none'">Day 2</button></td></tr>
+	</table>
+</div>	
 
 <div id="contents"><table >
 		<tr style="font-size:xx-large"><td><em>Please choose an interview type: </em></td></tr>
@@ -883,7 +895,7 @@ Please tell me the months of the year backwards, starting with December.<br />
 <div id="aconfirmation">
 <p class="auto-style1" style="padding: 0%; margin: 6%;   unicode-bidi: embed;         vertical-align: middle;">
 CAM Summary <br />
-<br />DELIRIUM <span id="apresent">Negative<br /><br /><em onclick="location.reload(true);">You may exit the application.</em></span></p>
+<br />2-item screener <span id="apresent">Negative<br /><br /><em onclick="location.reload(true);">You may exit the application.</em></span></p>
 </div>
 
 
