@@ -111,7 +111,7 @@ var add3 = (function () {
 
 function myFunction(){
 	if (var7 == 1 || var2 == 1) {
-		document.getElementById('apresent').innerHTML='POSITIVE on initial screening.<br /><br /><em onclick="location.reload(true);">Please notify the nurse or attending hospitalist that the patient has screened positive for delirium.</em>';
+		document.getElementById('apresent').innerHTML='POSITIVE on initial screening.<br /><br /><em onclick="location.reload(true);">Please notify the nurse or attending hospitalist that the patient has screened positive for delirium.</em>'; apresent=1;
 		document.getElementById('bpresent').innerHTML='POSITIVE on initial screening.<br /><br /><p onclick="document.getElementById(\'bconfirmation\').style.display=\'none\'; document.getElementById(\'2\').style.display=\'block\';"><em>Please click here to proceed to the full 3DCAM questionnaire. </em></p>';
 		document.getElementById('cpresent').innerHTML='POSITIVE on initial screening.<br /><br /><p onclick="document.getElementById(\'cconfirmation\').style.display=\'none\'; if (var2==1 && var7==1) {document.getElementById(\'c8\').style.display=\'block\'} else if (var2==1 && var7==0) {document.getElementById(\'c4\').style.display=\'block\'} else if (var2==0 && var7==1) {document.getElementById(\'c1\').style.display=\'block\'} "><em>Please click here to proceed to the full 3DCAM questionnaire. </em></p>'
 		;
@@ -211,6 +211,9 @@ function DemographicRecordViewModel() {
 			writer.writeEndElement();
 			writer.writeStartElement("var7");
 			writer.writeCDATA(var7);
+			writer.writeEndElement();
+			writer.writeStartElement("apresent");
+			writer.writeCDATA(apresent);
 			writer.writeEndElement();
 			
 		if (this.var2dob() != null){
@@ -1132,7 +1135,7 @@ Please tell me the months of the year backwards, starting with December.<br />
 <p class="auto-style1" style="padding: 0%; margin: 6%;   unicode-bidi: embed;         vertical-align: middle;">
 CAM Summary <br />
 <br />2-item screener <span id="apresent">Negative<br /><br /><em onclick="location.reload(true);">You may exit the application.</em></span>
-	<br /><input type="submit" id="submit" value="Upload Patient Data" /><br />
+	<br /><br /><input type="submit" id="submit" value="Upload Patient Data" /><br />
 </p>
 
 	
