@@ -192,8 +192,16 @@ function DemographicRecordViewModel() {
 		writer.writeEndElement();
 		
 		writer.writeStartElement("redcap_event_name");
-		if (this.event_id() == '5274') {
+		//if (this.event_id() == '5274') {
+		if (day == 1) {
 			writer.writeCDATA('hd1_cnapct_intervi_arm_1');	//
+		}
+		//else if (this.event_id() == '5278') {
+		else if (day == 2) {
+			writer.writeCDATA('hd2_cnapct_intervi_arm_1');	//
+		}
+		else if (this.event_id() == '5272') {
+			writer.writeCDATA('hd1_hospitalist_in_arm_1');	//
 		}
 		else {
 			writer.writeCDATA('hd1_cnapct_intervi_arm_1');	//
@@ -212,9 +220,16 @@ function DemographicRecordViewModel() {
 			writer.writeStartElement("var7");
 			writer.writeCDATA(var7);
 			writer.writeEndElement();
-			writer.writeStartElement("apresent");
-			writer.writeCDATA(apresent);
+			//writer.writeStartElement("apresent");
+			//writer.writeCDATA(apresent);
+			//writer.writeEndElement();
+
+		if (this.event_id() == '5272') {
+			writer.writeStartElement("var2");
+			writer.writeCDATA(var2);
 			writer.writeEndElement();
+		}
+
 			
 		if (this.var2dob() != null){
 			writer.writeStartElement("var2dob");
@@ -365,7 +380,6 @@ $(document).ready(
 	<p style=" margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:center;direction:ltr;unicode-bidi:embed;">
 	<span style="font-size:8.0pt;color:#438086;">[CAM Copyright 2003, Hospital Elder Life Program, LLC.  Not to be reproduced without permission] Version 4.1</span><span style="font-size:8.0pt;color:#438086;"> </span></p>
 </div>
- <form method="post">
 <div id="tabs">
   <ul>
     <li><a href="#details"><span>Test</span></a></li>
@@ -1131,6 +1145,7 @@ Please tell me the months of the year backwards, starting with December.<br />
 	</table>
 </div>
 
+<form method="post">
 <div id="aconfirmation">
 <p class="auto-style1" style="padding: 0%; margin: 6%;   unicode-bidi: embed;         vertical-align: middle;">
 CAM Summary <br />
