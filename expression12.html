@@ -1238,7 +1238,7 @@ Consult the medical record or contact a family member, friend, or health care pr
 	<tr>
 		<td>&nbsp;</td>
 		<td>
-		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var21 = 0; document.getElementById('c22').style.display = 'block'; document.getElementById('c21').style.display = 'none';"/></td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var21 = 0; if (day==2) { document.getElementById('c22').style.display = 'block';} else {document.getElementById('26').style.display = 'block';} document.getElementById('c21').style.display = 'none';"/></td>
 		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var21 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('c21').style.display = 'none';"/></td>
@@ -1922,7 +1922,7 @@ Consult the medical record or contact a family member, friend, or health care pr
 	<tr>
 		<td>&nbsp;</td>
 		<td>
-		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var21 = 0; document.getElementById('25').style.display = 'block'; document.getElementById('24').style.display = 'none';"/></td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var21 = 0; if (day==2) { document.getElementById('25').style.display = 'block';} else {document.getElementById('26').style.display = 'block';} document.getElementById('24').style.display = 'none';"/></td>
 		<td style="width:200px">&nbsp;</td>
 		<td>
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var21 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('24').style.display = 'none';"/></td>
