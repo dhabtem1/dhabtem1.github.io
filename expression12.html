@@ -440,7 +440,7 @@ function DemographicRecordViewModel() {
 $(document).ready(
 	function(){
 		jQuery.data(document.body, "token", "38A83B313C6E399929D79624612404F8");
-		jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v6.15.9/DataEntry/index.php?pid=1186&page=pctcna_interview&id=");
+		jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v6.15.9/DataEntry/grid.php?pid=1186&arm=1&id=");
 		jQuery.data(document.body, "apiUrl", "https://redcap.bidmc.harvard.edu/redcap/api/");
 		
 		var viewModel = new DemographicRecordViewModel();
@@ -491,7 +491,7 @@ $(document).ready(
 		$("form").submit(function() {
 			var viewModel = jQuery.data(document.body, "viewModel");
 			var xml = viewModel.toXml();
-			alert(xml);
+			//alert(xml);
 			var apiUrl = jQuery.data(document.body, "apiUrl");
 			var token  = jQuery.data(document.body, "token");
 			
@@ -560,7 +560,7 @@ $(document).ready(
     <li><a href="#readme"><span>Read Me</span></a></li>
   </ul>
   <div id="readme">
-	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
+	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;"><!--
 		<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
 		<strong>Please Note!</strong>
 	The following page demonstrates the use of the REDCap API functions to collect and save data into a database.  The demonstration employs jQuery and jQuery UI to illustrate the use of themes and customized data collection interfaces.  
@@ -571,7 +571,7 @@ $(document).ready(
 		</p>
 		<p>
 		As a rule the REDCap API will update values supplied to the system.  Fields left blank will be ignored by the API.
-		</p>
+		</p>-->
 	</div>
   </div>
   <div id="details">
@@ -697,7 +697,12 @@ Please tell me the months of the year backwards, starting with December.<br />
 <div id="cconfirmation">
 <p class="auto-style1" style="padding: 0%; margin: 6%;   unicode-bidi: embed;         vertical-align: middle;">
 CAM Summary <br />
-<br />DELIRIUM <span id="cpresent">Negative<br /><br /><em onclick="location.reload();">You may close the application at this time.</em></span></p>
+<br />DELIRIUM <span id="cpresent">Negative<br /><br />
+<!--<em onclick="location.reload();">You may close the application at this time.</em>-->
+<form method='post'>	<span class="auto-style1" ><br /><br /><input type="submit" id="submit" value="Upload Patient Data" /><br /> </span></form>
+</span></p>
+
+
 </div>
 
 
@@ -1392,13 +1397,15 @@ Please tell me the months of the year backwards, starting with December.<br />
 <div id="bconfirmation">
 <p class="auto-style1" style="padding: 0%; margin: 6%;   unicode-bidi: embed;         vertical-align: middle;">
 CAM Summary <br />
-<br />DELIRIUM <span id="bpresent">Negative<br /><br /><em onclick="location.reload();">You may close the application at this time.</em></span></p>
-
+<br />DELIRIUM <span id="bpresent">Negative<br /><br />
+<!--<em onclick="location.reload();">You may close the application at this time.</em>-->
 <form method="post">
-	<br /><br /><input type="submit" id="submit" value="Upload Patient Data" /><br />
+	<span class="auto-style1" ><br /><br /><input type="submit" id="submit" value="Upload Patient Data" /><br /></span>
 </form>
-</div>
+</span></p>
 
+
+</div>
 <div id="2" >
 <table class="auto-style3" style="width: 100%; margin-bottom:50px">
 	<tr onclick="document.getElementById('2').style.display='none'; document.getElementById('bconfirmation').style.display='block';">
