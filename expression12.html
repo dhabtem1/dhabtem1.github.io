@@ -80,6 +80,8 @@
 
 day=0;
 
+form=0;
+
 var1=0;
 var2=0;
 var3=0;
@@ -163,13 +165,14 @@ function DemographicRecordViewModel() {
 	this.record_id  	= ko.observable();
 	this.event_id  	= ko.observable();
 	
-    this.first_name = ko.observable();
+	this.form  	= ko.observable();
+	this.rand_hosp  	= ko.observable();
 	
+    this.first_name = ko.observable();
     this.var2 = ko.observable();
     this.var7 = ko.observable();
     this.apresent = ko.observable();
     this.var2dob = ko.observable();
-	
     this.last_name 	= ko.observable();
     this.dob 		= ko.observable();
     this.sex 		= ko.observable();
@@ -193,27 +196,46 @@ function DemographicRecordViewModel() {
 		
 		writer.writeStartElement("redcap_event_name");
 		//if (this.event_id() == '5274') {
-		if (day == 1) {
+		if (day == 1 && this.form()==1) {
 			writer.writeCDATA('hd1_cnapct_intervi_arm_1');	//
 		}
 		//else if (this.event_id() == '5278') {
-		else if (day == 2) {
+		else if (day == 2 && this.form()==1) {
 			writer.writeCDATA('hd2_cnapct_intervi_arm_1');	//
 		}
-		else if (this.event_id() == '5272') {
+		//else if (this.event_id() == '5272') {
+		//else if (day==1 && form==2) {
+		else if (day==1 && this.form()==2) {
 			writer.writeCDATA('hd1_hospitalist_in_arm_1');	//
+		}
+		else if (day==2 && this.form()==2) {
+			writer.writeCDATA('hd2_hospitalist_in_arm_1');	//
+		}
+		else if (day==1 && this.form()==3) {
+			writer.writeCDATA('hd1_nurse_intervie_arm_1');	
+		}
+		else if (day==2 && this.form()==3) {
+			writer.writeCDATA('hd2_nurse_intervie_arm_1');	
 		}
 		else {
 			writer.writeCDATA('hd1_cnapct_intervi_arm_1');	//
 		}
 		writer.writeEndElement();
 		
+			//writer.writeStartElement("day");
+			//writer.writeCDATA(day);
+			//writer.writeEndElement();
+			//writer.writeStartElement("form");
+			//writer.writeCDATA(this.form());
+			//writer.writeEndElement();
+			
 		if (this.first_name() != null){
 			writer.writeStartElement("first_name");
 			writer.writeCDATA(this.first_name());
 			writer.writeEndElement();
 		}
 		
+		if (this.form()==1) {
 			writer.writeStartElement("var2");
 			writer.writeCDATA(var2);
 			writer.writeEndElement();
@@ -223,13 +245,156 @@ function DemographicRecordViewModel() {
 			//writer.writeStartElement("apresent");
 			//writer.writeCDATA(apresent);
 			//writer.writeEndElement();
+		}
+		else if (this.form()==2) {
+			writer.writeStartElement("b2");
+			writer.writeCDATA(var2);
+			writer.writeEndElement();
+			writer.writeStartElement("b7");
+			writer.writeCDATA(var7);
+			writer.writeEndElement();
+			writer.writeStartElement("b1");
+			writer.writeCDATA(var1);
+			writer.writeEndElement();
+			writer.writeStartElement("b3");
+			writer.writeCDATA(var3);
+			writer.writeEndElement();
+			writer.writeStartElement("b4");
+			writer.writeCDATA(var4);
+			writer.writeEndElement();
+			writer.writeStartElement("b5");
+			writer.writeCDATA(var5);
+			writer.writeEndElement();
+			writer.writeStartElement("b6");
+			writer.writeCDATA(var6);
+			writer.writeEndElement();
+			writer.writeStartElement("b8");
+			writer.writeCDATA(var8);
+			writer.writeEndElement();
+			writer.writeStartElement("b9");
+			writer.writeCDATA(var9);
+			writer.writeEndElement();
+			writer.writeStartElement("b10");
+			writer.writeCDATA(var10);
+			writer.writeEndElement();
+			writer.writeStartElement("b11a");
+			writer.writeCDATA(var11a);
+			writer.writeEndElement();
+			writer.writeStartElement("b11b");
+			writer.writeCDATA(var11b);
+			writer.writeEndElement();
+			writer.writeStartElement("b12");
+			writer.writeCDATA(var12);
+			writer.writeEndElement();
+			writer.writeStartElement("b13");
+			writer.writeCDATA(var13);
+			writer.writeEndElement();
+			writer.writeStartElement("b14");
+			writer.writeCDATA(var14);
+			writer.writeEndElement();
+			writer.writeStartElement("b15");
+			writer.writeCDATA(var15);
+			writer.writeEndElement();
+			writer.writeStartElement("b16");
+			writer.writeCDATA(var16);
+			writer.writeEndElement();
+			writer.writeStartElement("b17");
+			writer.writeCDATA(var17);
+			writer.writeEndElement();
+			writer.writeStartElement("b18");
+			writer.writeCDATA(var18);
+			writer.writeEndElement();
+			writer.writeStartElement("b19");
+			writer.writeCDATA(var19);
+			writer.writeEndElement();
+			writer.writeStartElement("b20");
+			writer.writeCDATA(var20);
+			writer.writeEndElement();
+			writer.writeStartElement("b21");
+			writer.writeCDATA(var21);
+			writer.writeEndElement();
+			writer.writeStartElement("b22");
+			writer.writeCDATA(var22);
+			writer.writeEndElement();
+		}
 
+		else if (this.form()==3) {
+			writer.writeStartElement("n2");
+			writer.writeCDATA(var2);
+			writer.writeEndElement();
+			writer.writeStartElement("n7");
+			writer.writeCDATA(var7);
+			writer.writeEndElement();
+			writer.writeStartElement("n1");
+			writer.writeCDATA(var1);
+			writer.writeEndElement();
+			writer.writeStartElement("n3");
+			writer.writeCDATA(var3);
+			writer.writeEndElement();
+			writer.writeStartElement("n4");
+			writer.writeCDATA(var4);
+			writer.writeEndElement();
+			writer.writeStartElement("n5");
+			writer.writeCDATA(var5);
+			writer.writeEndElement();
+			writer.writeStartElement("n6");
+			writer.writeCDATA(var6);
+			writer.writeEndElement();
+			writer.writeStartElement("n8");
+			writer.writeCDATA(var8);
+			writer.writeEndElement();
+			writer.writeStartElement("n9");
+			writer.writeCDATA(var9);
+			writer.writeEndElement();
+			writer.writeStartElement("n10");
+			writer.writeCDATA(var10);
+			writer.writeEndElement();
+			writer.writeStartElement("n11a");
+			writer.writeCDATA(var11a);
+			writer.writeEndElement();
+			writer.writeStartElement("n11b");
+			writer.writeCDATA(var11b);
+			writer.writeEndElement();
+			writer.writeStartElement("n12");
+			writer.writeCDATA(var12);
+			writer.writeEndElement();
+			writer.writeStartElement("n13");
+			writer.writeCDATA(var13);
+			writer.writeEndElement();
+			writer.writeStartElement("n14");
+			writer.writeCDATA(var14);
+			writer.writeEndElement();
+			writer.writeStartElement("n15");
+			writer.writeCDATA(var15);
+			writer.writeEndElement();
+			writer.writeStartElement("n16");
+			writer.writeCDATA(var16);
+			writer.writeEndElement();
+			writer.writeStartElement("n17");
+			writer.writeCDATA(var17);
+			writer.writeEndElement();
+			writer.writeStartElement("n18");
+			writer.writeCDATA(var18);
+			writer.writeEndElement();
+			writer.writeStartElement("n19");
+			writer.writeCDATA(var19);
+			writer.writeEndElement();
+			writer.writeStartElement("n20");
+			writer.writeCDATA(var20);
+			writer.writeEndElement();
+			writer.writeStartElement("n21");
+			writer.writeCDATA(var21);
+			writer.writeEndElement();
+			writer.writeStartElement("n22");
+			writer.writeCDATA(var22);
+			writer.writeEndElement();
+		}		
+		
 		if (this.event_id() == '5272') {
 			writer.writeStartElement("var2");
 			writer.writeCDATA(var2);
 			writer.writeEndElement();
 		}
-
 			
 		if (this.var2dob() != null){
 			writer.writeStartElement("var2dob");
@@ -295,6 +460,10 @@ $(document).ready(
 
 		var record = $.url().param("record");
 		var event_id = $.url().param("event_id");
+		
+		var form = $.url().param("form");
+		var rand_hosp = $.url().param("rand_hosp");
+		
 		if (record == null){
 			$( "#dialog-message-record-missing" ).dialog({
 			      modal: true,
@@ -312,6 +481,11 @@ $(document).ready(
 			$("#record_id").attr("disabled","disabled");
 			viewModel.event_id(event_id);
 			$("#event_id").attr("disabled","disabled");
+			
+			viewModel.form(form);
+			$("#form").attr("disabled","disabled");
+			viewModel.rand_hosp(rand_hosp);
+			$("#rand_hosp").attr("disabled","disabled");
 		}
 
 		$("form").submit(function() {
@@ -407,6 +581,13 @@ $(document).ready(
 			<input id="record_id" data-bind="value: record_id" name="record_id" type="text" size="5"/>
 		<label for="event_id">Event ID: </label>
 			<input id="event_id" data-bind="value: event_id" name="event_id" type="text" size="5"/>
+			
+		<label for="form">Form ID: </label>
+			<input id="form" data-bind="value: form" name="form" type="text" size="5"/>
+		<label for="rand_hosp">Randomization ID: </label>
+			<input id="rand_hosp" data-bind="value: rand_hosp" name="rand_hosp" type="text" size="5"/>
+			
+			
 	</fieldset>
   </div>
 </div>
@@ -455,11 +636,11 @@ $(document).ready(
 <div id="contents"><table >
 		<tr style="font-size:xx-large"><td><em>Please choose an interview type: </em></td></tr>
 		<tr style="height:25px"><td></td></tr>
-		<tr><td><button name="Abutton1" style="font-size:xx-large" onclick="document.getElementById('a3').style.display='block'; document.getElementById('contents').style.display='none'">A. PCT/CNA Interview</button></td></tr>
+		<tr><td><button name="Af1" style="font-size:xx-large" onclick="form = 1; document.getElementById('a3').style.display='block'; document.getElementById('contents').style.display='none'">A. PCT/CNA Interview</button></td></tr>
 		<tr style="height:25px"><td></td></tr>
-		<tr><td><button name="Bbutton1" style="font-size:xx-large" onclick="document.getElementById('3').style.display='block'; document.getElementById('contents').style.display='none'">B. Hospitalist/Nurse Interview excluding skip patterns</button></td></tr>
+		<tr><td><button name="Bf1" style="font-size:xx-large" onclick="form = 2; document.getElementById('3').style.display='block'; document.getElementById('contents').style.display='none'">B. Hospitalist/Nurse Interview excluding skip patterns</button></td></tr>
 		<tr style="height:25px"><td></td></tr>
-		<tr><td><button name="Cbutton1" style="font-size:xx-large" onclick="document.getElementById('c2').style.display='block'; document.getElementById('contents').style.display='none'">C. Hospitalist/Nurse Interview including skip patterns</button></td></tr>
+		<tr><td><button name="Cf1" style="font-size:xx-large" onclick="form = 3; document.getElementById('c2').style.display='block'; document.getElementById('contents').style.display='none'">C. Hospitalist/Nurse Interview including skip patterns</button></td></tr>
 </table>
 </div>	
 
@@ -1152,12 +1333,10 @@ CAM Summary <br />
 <br />2-item screener <span id="apresent">Negative<br /><br /><em onclick="location.reload(true);">You may exit the application.</em></span>
 	<br /><br /><input type="submit" id="submit" value="Upload Patient Data" /><br />
 </p>
-
 	
 </div></form>
 
 </div>
-
 
 <div id="3"  >
 <table class="auto-style3" style="width: 100%; margin-bottom:50px">
@@ -1201,10 +1380,10 @@ Please tell me the months of the year backwards, starting with December.<br />
 	<tr>
 		<td>&nbsp;</td>
 		<td>
-		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var7 = 0; if (var2==0) {document.getElementById('bconfirmation').style.display = 'block';} else {document.getElementById('2').style.display = 'block';}  document.getElementById('8').style.display = 'none';"/></td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var7 = 0; if (var2==0) {document.getElementById('bconfirmation').style.display = 'block';} else {document.getElementById('2').style.display = 'block';}  document.getElementById('8').style.display = 'none'; form = 2; "/></td>
 		<td style="width:200px">&nbsp;</td>
 		<td>
-		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var7 = 1; document.getElementById('2').style.display = 'block'; document.getElementById('8').style.display = 'none';"/></td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var7 = 1; document.getElementById('2').style.display = 'block'; document.getElementById('8').style.display = 'none'; form = 2; "/></td>
 		<td>&nbsp;</td>
 	</tr>
 	</table>
@@ -1214,6 +1393,10 @@ Please tell me the months of the year backwards, starting with December.<br />
 <p class="auto-style1" style="padding: 0%; margin: 6%;   unicode-bidi: embed;         vertical-align: middle;">
 CAM Summary <br />
 <br />DELIRIUM <span id="bpresent">Negative<br /><br /><em onclick="location.reload();">You may close the application at this time.</em></span></p>
+
+<form method="post">
+	<br /><br /><input type="submit" id="submit" value="Upload Patient Data" /><br />
+</form>
 </div>
 
 <div id="2" >
@@ -1530,7 +1713,7 @@ Was the patient's flow of ideas unclear or illogical? <br />
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var13 = 0; document.getElementById('17').style.display = 'block'; document.getElementById('16').style.display = 'none';"/></td>
 		<td style="width:200px">&nbsp;</td>
 		<td>
-		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var13 = 0; document.getElementById('17').style.display = 'block'; document.getElementById('16').style.display = 'none';"/></td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var13 = 1; document.getElementById('17').style.display = 'block'; document.getElementById('16').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
 	</tr>
 	</table>
@@ -1787,6 +1970,11 @@ CAM Summary <br />
 	</tr>
 </table>
 <p>&nbsp;</p>
+
+<form method="post">
+	<br /><br /><input type="submit" id="submit" value="Upload Patient Data" /><br />
+</form>
+
 </div>
 
 
