@@ -87,7 +87,7 @@ day=0;
 
 form=0;
 
-referral=0;
+referral='';
 
 var1=0;
 var2=0;
@@ -827,7 +827,7 @@ During the past day have you felt confused? <br />
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var8 = 0; document.getElementById('c9').style.display = 'block'; document.getElementById('c8').style.display = 'none';"/></td>
 		<td style="width:200px">&nbsp;</td>
 		<td>
-		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var8 = 1; if ((var1==1 || var2==1 || var3==1) && (var4==1 || var5==1 || var6==1 || var7==1)) {document.getElementById('26').style.display = 'block';} else if (var1==1 || var2==1 || var3==1) {document.getElementById('c16').style.display = 'block';} else if (var4==1 || var5==1 || var6==1 || var7==1) {document.getElementById('c10a').style.display = 'block';} document.getElementById('c8').style.display = 'none';"/></td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var8 = 1; if ((var1==1 || var2==1 || var3==1) && (var4==1 || var5==1 || var6==1 || var7==1)) {document.getElementById('26').style.display = 'block';} else if (var1==1 || var2==1 || var3==1) {referral = 'c16'; document.getElementById('c10a').style.display = 'block';} else if (var4==1 || var5==1 || var6==1 || var7==1) {referral = 'c11a'; document.getElementById('c10a').style.display = 'block';} document.getElementById('c8').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
 	</tr>
 	</table>
@@ -842,7 +842,6 @@ During the past day have you felt confused? <br />
 <p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('10').style.display='none'; document.getElementById('9').style.display='block'; ">
 During the past day did you think that you were not really in the hospital?<br />
 <em></em> </p>
-
 <p>&nbsp;</p>
 <table style="width: 100%">
 	<tr>
@@ -851,7 +850,7 @@ During the past day did you think that you were not really in the hospital?<br /
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var9 = 0; document.getElementById('c10').style.display = 'block'; document.getElementById('c9').style.display = 'none';"/></td>
 		<td style="width:200px">&nbsp;</td>
 		<td>
-		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var9 = 1; if ((var1==1 || var2==1 || var3==1) && (var4==1 || var5==1 || var6==1 || var7==1)) {document.getElementById('26').style.display = 'block';} else if (var1==1 || var2==1 || var3==1) {document.getElementById('c16').style.display = 'block';} else if (var4==1 || var5==1 || var6==1 || var7==1) {document.getElementById('c10a').style.display = 'block';} document.getElementById('c9').style.display = 'none';"/></td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var9 = 1; if ((var1==1 || var2==1 || var3==1) && (var4==1 || var5==1 || var6==1 || var7==1)) {document.getElementById('26').style.display = 'block';} else if (var1==1 || var2==1 || var3==1) {referral = 'c16'; document.getElementById('c10a').style.display = 'block';} else if (var4==1 || var5==1 || var6==1 || var7==1) {referral = 'c11a'; document.getElementById('c10a').style.display = 'block';} document.getElementById('c9').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
 	</tr>
 	</table>
@@ -872,10 +871,10 @@ During the past day did you think that you were not really in the hospital?<br /
 	<tr>
 		<td>&nbsp;</td>
 		<td>
-		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var10 = 0; if ((var1==1 || var2==1 || var3==1) && (var4==1 || var5==1 || var6==1 || var7==1)) {referral = 18; document.getElementById('c10a').style.display = 'block';} else {referral = 111; document.getElementById('c10a').style.display = 'block';} document.getElementById('c10').style.display = 'none';"/></td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var10 = 0; if ((var1==1 || var2==1 || var3==1) && (var4==1 || var5==1 || var6==1 || var7==1)) {referral = 'c18'; } else if (var1==1 || var2==1 || var3==1) {referral = 'c16';} else {referral = 'c11a';} document.getElementById('c10a').style.display = 'block'; document.getElementById('c10').style.display = 'none';"/></td>
 		<td style="width:200px">&nbsp;</td>
 		<td>
-		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var10 = 1; document.getElementById('c10a').style.display = 'block'; document.getElementById('c10').style.display = 'none';"/></td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var10 = 1; if ((var1==1 || var2==1 || var3==1) && (var4==1 || var5==1 || var6==1 || var7==1)) {document.getElementById('26').style.display = 'block';} else if (var1==1 || var2==1 || var3==1) {referral = 'c16'; document.getElementById('c10a').style.display = 'block';} else {referral = 'c11a'; document.getElementById('c10a').style.display = 'block';}  document.getElementById('c10').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
 	</tr>
 	</table>
@@ -887,7 +886,9 @@ During the past day did you think that you were not really in the hospital?<br /
 		<td onclick="myFunction()">◀</td>
 	</tr>
 </table>
-<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('c10a').style.display='none'; if (referral>0) {document.getElementById('referral').style.display='block';} else {document.getElementById('c11a').style.display='block';} " style="font-size: xx-large; text-align: center;">
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" 
+	onclick="document.getElementById('c10a').style.display='none'; if (referral!='') {document.getElementById(referral).style.display='block';} else {document.getElementById('c11a').style.display='block';} " style="font-size: xx-large; text-align: center;"
+>
 Thank you<br /><br /><br />
 <em >End of patient questions.  Please tap here to advance to ratings.
 </em> </p>
