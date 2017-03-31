@@ -88,6 +88,7 @@ day=0;
 form=0;
 
 referral='';
+startPageReferral='';
 
 time1=0;
 time2=0;
@@ -276,6 +277,9 @@ function DemographicRecordViewModel() {
 			//writer.writeStartElement("apresent");
 			//writer.writeCDATA(apresent);
 			//writer.writeEndElement();
+			writer.writeStartElement("time0");
+			writer.writeCDATA(time0);
+			writer.writeEndElement();
 			writer.writeStartElement("time2");
 			writer.writeCDATA(time2);
 			writer.writeEndElement();
@@ -354,6 +358,9 @@ function DemographicRecordViewModel() {
 			writer.writeCDATA(var22);
 			writer.writeEndElement();
 			
+			writer.writeStartElement("bt0");
+			writer.writeCDATA(time0);
+			writer.writeEndElement();
 			writer.writeStartElement("bt2");
 			writer.writeCDATA(time2);
 			writer.writeEndElement();
@@ -497,6 +504,9 @@ function DemographicRecordViewModel() {
 			writer.writeCDATA(var22);
 			writer.writeEndElement();
 			
+			writer.writeStartElement("nt0");
+			writer.writeCDATA(time0);
+			writer.writeEndElement();
 			writer.writeStartElement("nt2");
 			writer.writeCDATA(time2);
 			writer.writeEndElement();
@@ -620,7 +630,32 @@ function DemographicRecordViewModel() {
 $(document).ready(
 	function(){
 		jQuery.data(document.body, "token", "38A83B313C6E399929D79624612404F8");
-		jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/record_home.php?pid=1186&arm=1&id=");
+		
+		var form = $.url().param("form");
+		var rand_hosp = $.url().param("rand_hosp");
+
+		if (day == 1 && form==1) {
+			jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/index.php?pid=1186&event_id=5274&page=pctcna_interview&id=");
+		}
+		else if (day == 2 && form==1) {
+			jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/index.php?pid=1186&event_id=5278&page=pctcna_interview&id=");
+		}
+		else if (day==1 && form==2) {
+			jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/index.php?pid=1186&event_id=5272&page=hospitalist_interview&id=");
+		}
+		else if (day==2 && form==2) {
+			jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/index.php?pid=1186&event_id=5277&page=hospitalist_interview&id=");
+		}
+		else if (day==1 && form==3) {
+			jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/index.php?pid=1186&event_id=5269&page=nurse_interview&id=");
+		}
+		else if (day==2 && form==3) {
+			jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/index.php?pid=1186&event_id=5276&page=nurse_interview&id=");
+		}
+		else {
+			jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/record_home.php?pid=1186&arm=1&id=");
+		}
+
 		jQuery.data(document.body, "apiUrl", "https://redcap.bidmc.harvard.edu/redcap/api/");
 		
 		var viewModel = new DemographicRecordViewModel();
@@ -640,9 +675,6 @@ $(document).ready(
 
 		var record = $.url().param("record");
 		var event_id = $.url().param("event_id");
-		
-		var form = $.url().param("form");
-		var rand_hosp = $.url().param("rand_hosp");
 		
 		if (record == null){
 			$( "#dialog-message-record-missing" ).dialog({
@@ -721,7 +753,7 @@ $(document).ready(
 </head>
 
 <body onclick='myFunction();' 
-	onload="document.getElementById('2').style.display='none'; document.getElementById('3').style.display='none'; document.getElementById('4').style.display='none'; document.getElementById('5').style.display='none'; document.getElementById('6').style.display='none'; document.getElementById('7').style.display='none'; document.getElementById('8').style.display='none'; document.getElementById('9').style.display='none'; document.getElementById('10').style.display='none'; document.getElementById('11').style.display='none'; document.getElementById('12').style.display='none'; document.getElementById('13').style.display='none'; document.getElementById('14').style.display='none'; document.getElementById('15').style.display='none'; document.getElementById('16').style.display='none'; document.getElementById('17').style.display='none'; document.getElementById('18').style.display='none'; document.getElementById('19').style.display='none'; document.getElementById('20').style.display='none'; document.getElementById('21').style.display='none'; document.getElementById('22').style.display='none'; document.getElementById('23').style.display='none'; document.getElementById('24').style.display='none'; document.getElementById('25').style.display='none'; document.getElementById('26').style.display='none'; document.getElementById('contents').style.display='none';  document.getElementById('a3').style.display='none'; document.getElementById('a8').style.display='none'; document.getElementById('aconfirmation').style.display='none'; document.getElementById('bconfirmation').style.display='none'; document.getElementById('c2').style.display='none'; document.getElementById('c7').style.display='none'; document.getElementById('cconfirmation').style.display='none'; document.getElementById('c1').style.display='none'; document.getElementById('c3').style.display='none'; document.getElementById('c4').style.display='none'; document.getElementById('c5').style.display='none'; document.getElementById('c6').style.display='none'; document.getElementById('c8').style.display='none'; document.getElementById('c9').style.display='none'; document.getElementById('c10').style.display='none'; document.getElementById('c10a').style.display='none'; document.getElementById('c11a').style.display='none'; document.getElementById('c11b').style.display='none'; document.getElementById('c12').style.display='none'; document.getElementById('c13').style.display='none'; document.getElementById('c14').style.display='none'; document.getElementById('c15').style.display='none'; document.getElementById('c16').style.display='none'; document.getElementById('c17').style.display='none'; document.getElementById('c18').style.display='none'; document.getElementById('c19').style.display='none'; document.getElementById('c20').style.display='none'; document.getElementById('c21').style.display='none'; document.getElementById('c22').style.display='none'; document.getElementById('contents1').style.display='none'; " 
+	onload="document.getElementById('2').style.display='none'; document.getElementById('3').style.display='none'; document.getElementById('4').style.display='none'; document.getElementById('5').style.display='none'; document.getElementById('6').style.display='none'; document.getElementById('7').style.display='none'; document.getElementById('8').style.display='none'; document.getElementById('9').style.display='none'; document.getElementById('10').style.display='none'; document.getElementById('11').style.display='none'; document.getElementById('12').style.display='none'; document.getElementById('13').style.display='none'; document.getElementById('14').style.display='none'; document.getElementById('15').style.display='none'; document.getElementById('16').style.display='none'; document.getElementById('17').style.display='none'; document.getElementById('18').style.display='none'; document.getElementById('19').style.display='none'; document.getElementById('20').style.display='none'; document.getElementById('21').style.display='none'; document.getElementById('22').style.display='none'; document.getElementById('23').style.display='none'; document.getElementById('24').style.display='none'; document.getElementById('25').style.display='none'; document.getElementById('26').style.display='none'; document.getElementById('contents').style.display='none';  document.getElementById('a3').style.display='none'; document.getElementById('a8').style.display='none'; document.getElementById('aconfirmation').style.display='none'; document.getElementById('bconfirmation').style.display='none'; document.getElementById('c2').style.display='none'; document.getElementById('c7').style.display='none'; document.getElementById('cconfirmation').style.display='none'; document.getElementById('c1').style.display='none'; document.getElementById('c3').style.display='none'; document.getElementById('c4').style.display='none'; document.getElementById('c5').style.display='none'; document.getElementById('c6').style.display='none'; document.getElementById('c8').style.display='none'; document.getElementById('c9').style.display='none'; document.getElementById('c10').style.display='none'; document.getElementById('c10a').style.display='none'; document.getElementById('c11a').style.display='none'; document.getElementById('c11b').style.display='none'; document.getElementById('c12').style.display='none'; document.getElementById('c13').style.display='none'; document.getElementById('c14').style.display='none'; document.getElementById('c15').style.display='none'; document.getElementById('c16').style.display='none'; document.getElementById('c17').style.display='none'; document.getElementById('c18').style.display='none'; document.getElementById('c19').style.display='none'; document.getElementById('c20').style.display='none'; document.getElementById('c21').style.display='none'; document.getElementById('c22').style.display='none'; document.getElementById('contents1').style.display='none';document.getElementById('start').style.display='none'; " 
 	style="font-family:Arial, Helvetica, sans-serif">
 
 <div id="1" style="margin:12%"  onclick="document.getElementById('contents1').style.display='block'; document.getElementById('1').style.display='none';">
@@ -779,7 +811,6 @@ $(document).ready(
 	</div>
 </div>
 
-
 <div id="questions">
 
 <div id="contents1" >
@@ -795,14 +826,15 @@ $(document).ready(
 <div id="contents"><table >
 		<tr style="font-size:xx-large"><td><em>Please choose an interview type: </em></td></tr>
 		<tr style="height:25px"><td></td></tr>
-		<tr><td><button name="Af1" style="font-size:xx-large" onclick="form = 1; document.getElementById('a3').style.display='block'; document.getElementById('contents').style.display='none'">A. PCT/CNA Interview</button></td></tr>
+		<tr><td><button name="Af1" style="font-size:xx-large" onclick="startPageReferral = '1'; document.getElementById('start').style.display = 'block';  document.getElementById('contents').style.display='none'">A. PCT/CNA Interview</button></td></tr>
 		<tr style="height:25px"><td></td></tr>
-		<tr><td><button name="Bf1" style="font-size:xx-large" onclick="form = 2; document.getElementById('3').style.display='block'; document.getElementById('contents').style.display='none'">B. Hospitalist/Nurse Interview excluding skip patterns</button></td></tr>
+		<tr><td><button name="Bf1" style="font-size:xx-large" onclick="startPageReferral = '2'; document.getElementById('start').style.display = 'block'; document.getElementById('contents').style.display='none'">B. Hospitalist/Nurse Interview excluding skip patterns</button></td></tr>
 		<tr style="height:25px"><td></td></tr>
-		<tr><td><button name="Cf1" style="font-size:xx-large" onclick="form = 3; document.getElementById('c2').style.display='block'; document.getElementById('contents').style.display='none'">C. Hospitalist/Nurse Interview including skip patterns</button></td></tr>
+		<tr><td><button name="Cf1" style="font-size:xx-large" onclick="startPageReferral = '3'; document.getElementById('start').style.display = 'block'; document.getElementById('contents').style.display='none'">C. Hospitalist/Nurse Interview including skip patterns</button></td></tr>
 </table>
 </div>	
 
+<p><div id="start" style="text-align:center;padding:60px 128px;font-size:64px;margin:16px 8px;">Ready?</p><p><button onclick="time0=Date(); if (startPageReferral=='1') {document.getElementById('a3').style.display='block';} else if (startPageReferral=='2') {document.getElementById('3').style.display='block';} else if (startPageReferral=='3') {document.getElementById('c2').style.display='block';} else {document.getElementById('contents').style.display='block';} document.getElementById('start').style.display='none'; " style="text-align:center;padding:60px 128px;font-size:64px;margin:16px 8px;">Start</button></div></p>
 
 <div id="c2"  >
 <table class="auto-style3" style="width: 100%; margin-bottom:50px">
@@ -824,6 +856,9 @@ Please tell me the day of the week.  <br />
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var2 = 1; document.getElementById('c7').style.display = 'block'; document.getElementById('c2').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
 	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td>&nbsp;</td>
+	<td>&nbsp;</td></tr>
 	</table>
 </div>
 
