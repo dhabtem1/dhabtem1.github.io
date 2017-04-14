@@ -196,10 +196,8 @@ function myFunction(){
 function DemographicRecordViewModel() {
 	this.record_id  	= ko.observable();
 	this.event_id  	= ko.observable();
-	
 	this.form  	= ko.observable();
 	this.rand_hosp  	= ko.observable();
-	
     this.first_name = ko.observable();
     this.var2 = ko.observable();
     this.var7 = ko.observable();
@@ -231,36 +229,38 @@ function DemographicRecordViewModel() {
 		if (day == 1 && this.form()==1) {
 			writer.writeCDATA('hd1_cnapct_intervi_arm_1');	//
 		}
-		
 		else if (day == 2 && this.form()==1) {
 			writer.writeCDATA('hd2_cnapct_intervi_arm_1');	//
 		}
+		else if (day == 3 && this.form()==1) {
+			writer.writeCDATA('hd3_cnapct_intervi_arm_1');	//
+		}
 		
-		//else if (day==1 && form==2) {
 		else if (day==1 && this.form()==2) {
 			writer.writeCDATA('hd1_hospitalist_in_arm_1');	//
 		}
 		else if (day==2 && this.form()==2) {
 			writer.writeCDATA('hd2_hospitalist_in_arm_1');	//
 		}
+		else if (day==3 && this.form()==2) {
+			writer.writeCDATA('hd3_hospitalist_in_arm_1');	//
+		}
+		
 		else if (day==1 && this.form()==3) {
 			writer.writeCDATA('hd1_nurse_intervie_arm_1');	
 		}
 		else if (day==2 && this.form()==3) {
 			writer.writeCDATA('hd2_nurse_intervie_arm_1');	
 		}
+		else if (day==3 && this.form()==3) {
+			writer.writeCDATA('hd3_nurse_intervie_arm_1');	
+		}
+		
 		else {
 			writer.writeCDATA('hd1_cnapct_intervi_arm_1');	//
 		}
 		writer.writeEndElement();
 		
-			//writer.writeStartElement("day");
-			//writer.writeCDATA(day);
-			//writer.writeEndElement();
-			//writer.writeStartElement("form");
-			//writer.writeCDATA(this.form());
-			//writer.writeEndElement();
-			
 		if (this.first_name() != null){
 			writer.writeStartElement("first_name");
 			writer.writeCDATA(this.first_name());
@@ -703,7 +703,6 @@ $(document).ready(
 		$("form").submit(function() {
 			var viewModel = jQuery.data(document.body, "viewModel");
 			var xml = viewModel.toXml();
-			//alert(xml);
 			var apiUrl = jQuery.data(document.body, "apiUrl");
 			var token  = jQuery.data(document.body, "token");
 			
@@ -820,6 +819,8 @@ $(document).ready(
 		<tr><td><button name="Abutton1" style="font-size:xx-large" onclick="day = 1; document.getElementById('contents').style.display='block'; document.getElementById('contents1').style.display='none'">Day 1</button></td></tr>
 		<tr style="height:25px"><td></td></tr>
 		<tr><td><button name="Bbutton1" style="font-size:xx-large" onclick="day = 2; document.getElementById('contents').style.display='block'; document.getElementById('contents1').style.display='none'">Day 2</button></td></tr>
+		<tr style="height:25px"><td></td></tr>
+		<tr><td><button style="font-size:xx-large" onclick="day = 3; document.getElementById('contents').style.display='block'; document.getElementById('contents1').style.display='none'">Day 3</button></td></tr>
 	</table>
 </div>	
 
@@ -849,15 +850,15 @@ Please tell me the day of the week.  <br />
 <table style="width: 100%">
 	<tr onclick="time2=Date();">
 		<td>&nbsp;</td>
-		<td>
+		<td style="width:40%">
 		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var2 = 0; document.getElementById('c7').style.display = 'block'; document.getElementById('c2').style.display = 'none';"/></td>
 		<td style="width:200px">&nbsp;</td>
-		<td>
+		<td style="width:40%">
 		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var2 = 1; document.getElementById('c7').style.display = 'block'; document.getElementById('c2').style.display = 'none';"/></td>
 		<td>&nbsp;</td>
 	</tr>
 	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
 	<td>&nbsp;</td></tr>
 	</table>
 </div>
