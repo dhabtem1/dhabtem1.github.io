@@ -1,0 +1,2320 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>3D CAM ASSESSMENT Version 4.1</title>
+<style type="text/css">
+.auto-style1 {
+	text-align: center;
+	text-indent: -.28in;
+	direction: ltr;
+	font-family: "Arial Unicode MS";
+	color: black;
+	font-size: xx-large;
+	margin-left: .4in;
+	margin-top: 3.0pt;
+	margin-bottom: 0pt;
+}
+.auto-style2 {
+	text-align: left;
+	font-size: x-large;
+}
+.auto-style3 {
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: xx-large;
+	color: #C0C0C0;
+	background-color: #008080;
+}
+.auto-style4 {
+	background-color: #008080;
+	font-size: xx-large;
+	padding: 12%;
+}
+.auto-style5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	text-align: center;
+	color: #C0C0C0;
+	background-color: #808080;
+	padding: 1%;
+}
+.auto-style7 {
+	font-size: xx-large;
+	padding: 12%;
+}
+.auto-style8 {
+	font-size: xx-large;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.auto-style10 {
+	text-align: center;
+	text-indent: -.28in;
+	direction: ltr;
+	font-family: "Arial Unicode MS";
+	font-size: xx-large;
+	margin-left: .4in;
+	margin-top: 3.0pt;
+	margin-bottom: 0pt;
+	background-color: #008080;
+}
+.auto-style11 {
+	color: #FFFFFF;
+	font-size: 200%;
+}
+.button {
+    cursor: pointer;
+    font-size: 40px;
+    margin: 4px 2px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+}
+</style>
+<meta content="blendTrans(Duration=2.0)" http-equiv="Page-Enter" />
+	<script src="https://ifar-edc.hsl.harvard.edu/cdn/ajax/jQuery/jquery-1.9.1.min.js"  language="javascript"></script>
+	<script src="https://ifar-edc.hsl.harvard.edu/cdn/ajax/knockout/knockout-2.2.1.js"  language="javascript"></script>
+	<script src="https://ifar-edc.hsl.harvard.edu/cdn/ajax/xmlwriter/XMLWriter-1.0.0-min.js"  language="javascript"></script>
+	<script src="https://ifar-edc.hsl.harvard.edu/cdn/ajax/purl/purl-2.2.js"  language="javascript"></script>
+	<link rel="stylesheet" href="https://ifar-edc.hsl.harvard.edu/cdn/ajax/jquery.ui/1.10.2/themes/smoothness/jquery-ui.css" type="text/css" media="screen"/>
+	<script src="https://ifar-edc.hsl.harvard.edu/cdn/ajax/jquery.ui/1.10.2/jquery-ui.min.js"></script>
+<script type="text/javascript">
+
+day=0;
+
+form=0;
+
+referral='';
+startPageReferral='';
+
+time1=0;
+time2=0;
+time3=0;
+time4=0;
+time5=0;
+time6=0;
+time7=0;
+time8=0;
+time9=0;
+time10=0;
+time11a=0;
+time11b=0;
+time12=0;
+time13=0;
+time14=0;
+time15=0;
+time16=0;
+time17=0;
+time18=0;
+time19=0;
+time20=0;
+time21=0;
+time22=0;
+
+var1=0;
+var2=0;
+var3=0;
+var4=0;
+var5=0;
+var6=0;
+var7=0;
+var8=0;
+var9=0;
+var10=0;
+var11a=0;
+var11b=0;
+var12=0;
+var13=0;
+var14=0;
+var15=0;
+var16=0;
+var17=0;
+var18=0;
+var19=0;
+var20=0;
+var21=0;
+var22=0;
+
+var add3 = (function () {
+    var counter3 = 0;
+    return function () {return counter3 += 1;}
+})();
+
+function myFunction(){
+	if (var7 == 1 || var2 == 1) {
+		document.getElementById('apresent').innerHTML='POSITIVE on initial screening.<br /><br /><em onclick="location.reload(true);">Please notify the nurse or attending hospitalist that the patient has screened positive for delirium.</em>'; apresent=1;
+		document.getElementById('bpresent').innerHTML='POSITIVE on initial screening.<br /><br /><p onclick="document.getElementById(\'bconfirmation\').style.display=\'none\'; document.getElementById(\'2\').style.display=\'block\';"><em>Please click here to proceed to the full 3DCAM questionnaire. </em></p>';
+		document.getElementById('cpresent').innerHTML='POSITIVE on initial screening.<br /><br /><p onclick="document.getElementById(\'cconfirmation\').style.display=\'none\'; if (var2==1 && var7==1) {document.getElementById(\'c8\').style.display=\'block\'} else if (var2==1 && var7==0) {document.getElementById(\'c4\').style.display=\'block\'} else if (var2==0 && var7==1) {document.getElementById(\'c1\').style.display=\'block\'} "><em>Please click here to proceed to the full 3DCAM questionnaire. </em></p>'
+		;
+	}
+	
+	if (var1 == 1 || var2 ==1 || var3 ==1 || var13 ==1 || var14 ==1 || var15 ==1 ) {
+		document.getElementById('f3').innerHTML='<b>Disorganized Thinking</b> is evident';
+		document.getElementById('f3').style.backgroundColor='#4CAF50';
+	}
+	else {
+		document.getElementById('f3').innerHTML='Disorganized Thinking is not evident';
+		document.getElementById('f3').style.backgroundColor='#808080';
+	}
+	
+	if (var4 == 1 || var5 ==1 || var6 ==1 || var7 ==1 || var16 ==1 || var17 ==1 ) {
+		document.getElementById('f2').innerHTML='<b>Inattention</b> is evident';
+		document.getElementById('f2').style.backgroundColor='#4CAF50';
+	}
+	else {
+		document.getElementById('f2').innerHTML='Inattention is not evident';
+		document.getElementById('f2').style.backgroundColor='#808080';
+	}
+
+	if (var8 == 1 || var9 ==1 || var10 ==1 || var18 ==1 || var19 ==1 || var20 ==1 || var21 ==1 || var22 ==1 ) {
+		document.getElementById('f1').innerHTML='<b>Acute Onset and Fluctuating Course</b> are evident';
+		document.getElementById('f1').style.backgroundColor='#4CAF50';
+	}
+	else {
+		document.getElementById('f1').innerHTML='Acute Onset and Fluctuating Course are not evident';
+		document.getElementById('f1').style.backgroundColor='#808080';
+	}
+	
+	if (var11a == 1 || var11b ==1 || var12 ==1 ) {
+		document.getElementById('f4').innerHTML='<b>Altered Consciousness</b> is evident';
+		document.getElementById('f4').style.backgroundColor='#4CAF50';
+	}
+	else {
+		document.getElementById('f4').innerHTML='Altered Consciousness is not evident';
+		document.getElementById('f4').style.backgroundColor='#808080';
+	}
+	
+	if (((var11a == 1 || var11b ==1 || var12 ==1 ) || (var1 == 1 || var2 ==1 || var3 ==1 || var13 ==1 || var14 ==1 || var15 ==1 )) && (var4 == 1 || var5 ==1 || var6 ==1 || var7 ==1 || var16 ==1 || var17 ==1 ) && (var8 == 1 || var9 ==1 || var10 ==1 || var18 ==1 || var19 ==1 || var20 ==1 || var21 ==1 || var22 ==1 )) {
+		document.getElementById('present').innerHTML='POSITIVE';
+	}
+	
+}
+
+function DemographicRecordViewModel() {
+	this.record_id  	= ko.observable();
+	this.event_id  	= ko.observable();
+	this.form  	= ko.observable();
+	this.rand_hosp  	= ko.observable();
+    this.first_name = ko.observable();
+    this.var2 = ko.observable();
+    this.var7 = ko.observable();
+    this.apresent = ko.observable();
+    this.var2dob = ko.observable();
+    this.last_name 	= ko.observable();
+    this.dob 		= ko.observable();
+    this.sex 		= ko.observable();
+    this.address	= ko.observable();
+    
+    this.toXml = function (){
+
+    	var writer = new XMLWriter( 'UTF-8', '1.0' );
+		writer.formatting  = 'indented';//add indentation and newlines
+		writer.indentChar  = ' ';//indent with spaces
+		writer.indentation = 2;//add 2 spaces per level
+		  
+		writer.writeStartDocument();
+		writer.writeStartElement("records"); // <record>
+
+		writer.writeStartElement("item"); // <item>
+		
+		writer.writeStartElement("record_id");
+		writer.writeCDATA(this.record_id());
+		writer.writeEndElement();
+		
+		writer.writeStartElement("redcap_event_name");
+		
+		if (day == 1 && this.form()==1) {
+			writer.writeCDATA('hd1_cnapct_intervi_arm_1');	//
+		}
+		else if (day == 2 && this.form()==1) {
+			writer.writeCDATA('hd2_cnapct_intervi_arm_1');	//
+		}
+		else if (day == 3 && this.form()==1) {
+			writer.writeCDATA('hd3_cnapct_intervi_arm_1');	//
+		}
+		
+		else if (day==1 && this.form()==2) {
+			writer.writeCDATA('hd1_hospitalist_in_arm_1');	//
+		}
+		else if (day==2 && this.form()==2) {
+			writer.writeCDATA('hd2_hospitalist_in_arm_1');	//
+		}
+		else if (day==3 && this.form()==2) {
+			writer.writeCDATA('hd3_hospitalist_in_arm_1');	//
+		}
+		
+		else if (day==1 && this.form()==3) {
+			writer.writeCDATA('hd1_nurse_intervie_arm_1');	
+		}
+		else if (day==2 && this.form()==3) {
+			writer.writeCDATA('hd2_nurse_intervie_arm_1');	
+		}
+		else if (day==3 && this.form()==3) {
+			writer.writeCDATA('hd3_nurse_intervie_arm_1');	
+		}
+		
+		else {
+			writer.writeCDATA('hd1_cnapct_intervi_arm_1');	//
+		}
+		writer.writeEndElement();
+		
+		if (this.first_name() != null){
+			writer.writeStartElement("first_name");
+			writer.writeCDATA(this.first_name());
+			writer.writeEndElement();
+		}
+		
+		if (this.form()==1) {
+			writer.writeStartElement("var2");
+			writer.writeCDATA(var2);
+			writer.writeEndElement();
+			writer.writeStartElement("var7");
+			writer.writeCDATA(var7);
+			writer.writeEndElement();
+			//writer.writeStartElement("apresent");
+			//writer.writeCDATA(apresent);
+			//writer.writeEndElement();
+			writer.writeStartElement("time0");
+			writer.writeCDATA(time0);
+			writer.writeEndElement();
+			writer.writeStartElement("time2");
+			writer.writeCDATA(time2);
+			writer.writeEndElement();
+			writer.writeStartElement("time7");
+			writer.writeCDATA(time7);
+			writer.writeEndElement();
+		}
+		else if (this.form()==2) {
+			writer.writeStartElement("b2");
+			writer.writeCDATA(var2);
+			writer.writeEndElement();
+			writer.writeStartElement("b7");
+			writer.writeCDATA(var7);
+			writer.writeEndElement();
+			writer.writeStartElement("b1");
+			writer.writeCDATA(var1);
+			writer.writeEndElement();
+			writer.writeStartElement("b3");
+			writer.writeCDATA(var3);
+			writer.writeEndElement();
+			writer.writeStartElement("b4");
+			writer.writeCDATA(var4);
+			writer.writeEndElement();
+			writer.writeStartElement("b5");
+			writer.writeCDATA(var5);
+			writer.writeEndElement();
+			writer.writeStartElement("b6");
+			writer.writeCDATA(var6);
+			writer.writeEndElement();
+			writer.writeStartElement("b8");
+			writer.writeCDATA(var8);
+			writer.writeEndElement();
+			writer.writeStartElement("b9");
+			writer.writeCDATA(var9);
+			writer.writeEndElement();
+			writer.writeStartElement("b10");
+			writer.writeCDATA(var10);
+			writer.writeEndElement();
+			writer.writeStartElement("b11a");
+			writer.writeCDATA(var11a);
+			writer.writeEndElement();
+			writer.writeStartElement("b11b");
+			writer.writeCDATA(var11b);
+			writer.writeEndElement();
+			writer.writeStartElement("b12");
+			writer.writeCDATA(var12);
+			writer.writeEndElement();
+			writer.writeStartElement("b13");
+			writer.writeCDATA(var13);
+			writer.writeEndElement();
+			writer.writeStartElement("b14");
+			writer.writeCDATA(var14);
+			writer.writeEndElement();
+			writer.writeStartElement("b15");
+			writer.writeCDATA(var15);
+			writer.writeEndElement();
+			writer.writeStartElement("b16");
+			writer.writeCDATA(var16);
+			writer.writeEndElement();
+			writer.writeStartElement("b17");
+			writer.writeCDATA(var17);
+			writer.writeEndElement();
+			writer.writeStartElement("b18");
+			writer.writeCDATA(var18);
+			writer.writeEndElement();
+			writer.writeStartElement("b19");
+			writer.writeCDATA(var19);
+			writer.writeEndElement();
+			writer.writeStartElement("b20");
+			writer.writeCDATA(var20);
+			writer.writeEndElement();
+			writer.writeStartElement("b21");
+			writer.writeCDATA(var21);
+			writer.writeEndElement();
+			writer.writeStartElement("b22");
+			writer.writeCDATA(var22);
+			writer.writeEndElement();
+			
+			writer.writeStartElement("bt0");
+			writer.writeCDATA(time0);
+			writer.writeEndElement();
+			writer.writeStartElement("bt2");
+			writer.writeCDATA(time2);
+			writer.writeEndElement();
+			writer.writeStartElement("bt7");
+			writer.writeCDATA(time7);
+			writer.writeEndElement();
+			writer.writeStartElement("bt1");
+			writer.writeCDATA(time1);
+			writer.writeEndElement();
+			writer.writeStartElement("bt3");
+			writer.writeCDATA(time3);
+			writer.writeEndElement();
+			writer.writeStartElement("bt4");
+			writer.writeCDATA(time4);
+			writer.writeEndElement();
+			writer.writeStartElement("bt5");
+			writer.writeCDATA(time5);
+			writer.writeEndElement();
+			writer.writeStartElement("bt6");
+			writer.writeCDATA(time6);
+			writer.writeEndElement();
+			writer.writeStartElement("bt8");
+			writer.writeCDATA(time8);
+			writer.writeEndElement();
+			writer.writeStartElement("bt9");
+			writer.writeCDATA(time9);
+			writer.writeEndElement();
+			writer.writeStartElement("bt10");
+			writer.writeCDATA(time10);
+			writer.writeEndElement();
+			writer.writeStartElement("bt11a");
+			writer.writeCDATA(time11a);
+			writer.writeEndElement();
+			writer.writeStartElement("bt11b");
+			writer.writeCDATA(time11b);
+			writer.writeEndElement();
+			writer.writeStartElement("bt12");
+			writer.writeCDATA(time12);
+			writer.writeEndElement();
+			writer.writeStartElement("bt13");
+			writer.writeCDATA(time13);
+			writer.writeEndElement();
+			writer.writeStartElement("bt14");
+			writer.writeCDATA(time14);
+			writer.writeEndElement();
+			writer.writeStartElement("bt15");
+			writer.writeCDATA(time15);
+			writer.writeEndElement();
+			writer.writeStartElement("bt16");
+			writer.writeCDATA(time16);
+			writer.writeEndElement();
+			writer.writeStartElement("bt17");
+			writer.writeCDATA(time17);
+			writer.writeEndElement();
+			writer.writeStartElement("bt18");
+			writer.writeCDATA(time18);
+			writer.writeEndElement();
+			writer.writeStartElement("bt19");
+			writer.writeCDATA(time19);
+			writer.writeEndElement();
+			writer.writeStartElement("bt20");
+			writer.writeCDATA(time20);
+			writer.writeEndElement();
+			writer.writeStartElement("bt21");
+			writer.writeCDATA(time21);
+			writer.writeEndElement();
+			writer.writeStartElement("bt22");
+			writer.writeCDATA(time22);
+			writer.writeEndElement();
+			
+		}
+
+		else if (this.form()==3) {
+			writer.writeStartElement("n2");
+			writer.writeCDATA(var2);
+			writer.writeEndElement();
+			writer.writeStartElement("n7");
+			writer.writeCDATA(var7);
+			writer.writeEndElement();
+			writer.writeStartElement("n1");
+			writer.writeCDATA(var1);
+			writer.writeEndElement();
+			writer.writeStartElement("n3");
+			writer.writeCDATA(var3);
+			writer.writeEndElement();
+			writer.writeStartElement("n4");
+			writer.writeCDATA(var4);
+			writer.writeEndElement();
+			writer.writeStartElement("n5");
+			writer.writeCDATA(var5);
+			writer.writeEndElement();
+			writer.writeStartElement("n6");
+			writer.writeCDATA(var6);
+			writer.writeEndElement();
+			writer.writeStartElement("n8");
+			writer.writeCDATA(var8);
+			writer.writeEndElement();
+			writer.writeStartElement("n9");
+			writer.writeCDATA(var9);
+			writer.writeEndElement();
+			writer.writeStartElement("n10");
+			writer.writeCDATA(var10);
+			writer.writeEndElement();
+			writer.writeStartElement("n11a");
+			writer.writeCDATA(var11a);
+			writer.writeEndElement();
+			writer.writeStartElement("n11b");
+			writer.writeCDATA(var11b);
+			writer.writeEndElement();
+			writer.writeStartElement("n12");
+			writer.writeCDATA(var12);
+			writer.writeEndElement();
+			writer.writeStartElement("n13");
+			writer.writeCDATA(var13);
+			writer.writeEndElement();
+			writer.writeStartElement("n14");
+			writer.writeCDATA(var14);
+			writer.writeEndElement();
+			writer.writeStartElement("n15");
+			writer.writeCDATA(var15);
+			writer.writeEndElement();
+			writer.writeStartElement("n16");
+			writer.writeCDATA(var16);
+			writer.writeEndElement();
+			writer.writeStartElement("n17");
+			writer.writeCDATA(var17);
+			writer.writeEndElement();
+			writer.writeStartElement("n18");
+			writer.writeCDATA(var18);
+			writer.writeEndElement();
+			writer.writeStartElement("n19");
+			writer.writeCDATA(var19);
+			writer.writeEndElement();
+			writer.writeStartElement("n20");
+			writer.writeCDATA(var20);
+			writer.writeEndElement();
+			writer.writeStartElement("n21");
+			writer.writeCDATA(var21);
+			writer.writeEndElement();
+			writer.writeStartElement("n22");
+			writer.writeCDATA(var22);
+			writer.writeEndElement();
+			
+			writer.writeStartElement("nt0");
+			writer.writeCDATA(time0);
+			writer.writeEndElement();
+			writer.writeStartElement("nt2");
+			writer.writeCDATA(time2);
+			writer.writeEndElement();
+			writer.writeStartElement("nt7");
+			writer.writeCDATA(time7);
+			writer.writeEndElement();
+			writer.writeStartElement("nt1");
+			writer.writeCDATA(time1);
+			writer.writeEndElement();
+			writer.writeStartElement("nt3");
+			writer.writeCDATA(time3);
+			writer.writeEndElement();
+			writer.writeStartElement("nt4");
+			writer.writeCDATA(time4);
+			writer.writeEndElement();
+			writer.writeStartElement("nt5");
+			writer.writeCDATA(time5);
+			writer.writeEndElement();
+			writer.writeStartElement("nt6");
+			writer.writeCDATA(time6);
+			writer.writeEndElement();
+			writer.writeStartElement("nt8");
+			writer.writeCDATA(time8);
+			writer.writeEndElement();
+			writer.writeStartElement("nt9");
+			writer.writeCDATA(time9);
+			writer.writeEndElement();
+			writer.writeStartElement("nt10");
+			writer.writeCDATA(time10);
+			writer.writeEndElement();
+			writer.writeStartElement("nt11a");
+			writer.writeCDATA(time11a);
+			writer.writeEndElement();
+			writer.writeStartElement("nt11b");
+			writer.writeCDATA(time11b);
+			writer.writeEndElement();
+			writer.writeStartElement("nt12");
+			writer.writeCDATA(time12);
+			writer.writeEndElement();
+			writer.writeStartElement("nt13");
+			writer.writeCDATA(time13);
+			writer.writeEndElement();
+			writer.writeStartElement("nt14");
+			writer.writeCDATA(time14);
+			writer.writeEndElement();
+			writer.writeStartElement("nt15");
+			writer.writeCDATA(time15);
+			writer.writeEndElement();
+			writer.writeStartElement("nt16");
+			writer.writeCDATA(time16);
+			writer.writeEndElement();
+			writer.writeStartElement("nt17");
+			writer.writeCDATA(time17);
+			writer.writeEndElement();
+			writer.writeStartElement("nt18");
+			writer.writeCDATA(time18);
+			writer.writeEndElement();
+			writer.writeStartElement("nt19");
+			writer.writeCDATA(time19);
+			writer.writeEndElement();
+			writer.writeStartElement("nt20");
+			writer.writeCDATA(time20);
+			writer.writeEndElement();
+			writer.writeStartElement("nt21");
+			writer.writeCDATA(time21);
+			writer.writeEndElement();
+			writer.writeStartElement("nt22");
+			writer.writeCDATA(time22);
+			writer.writeEndElement();
+
+			
+		}		
+		
+		if (this.event_id() == '5272') {
+			writer.writeStartElement("var2");
+			writer.writeCDATA(var2);
+			writer.writeEndElement();
+		}
+			
+		if (this.var2dob() != null){
+			writer.writeStartElement("var2dob");
+			writer.writeCDATA(this.var2dob());
+			writer.writeEndElement();
+		}
+		
+		if (this.last_name() != null){
+			writer.writeStartElement("last_name");
+			writer.writeCDATA(this.last_name());
+			writer.writeEndElement();
+		}
+
+		if (this.dob() != null){
+			writer.writeStartElement("dob");
+			writer.writeCDATA(this.dob());
+			writer.writeEndElement();
+		}
+		
+		if (this.sex() != null){
+			writer.writeStartElement("sex");
+			writer.writeCDATA(this.sex());
+			writer.writeEndElement();
+		}
+
+		if (this.address() != null){
+			writer.writeStartElement("address");
+			writer.writeCDATA(this.address());
+			writer.writeEndElement();
+		}
+		
+		writer.writeEndElement(); // </item>
+		
+		writer.writeEndElement(); // </records>
+		
+		writer.writeEndDocument();
+		
+		return writer.flush();    	
+    }
+}
+
+
+$(document).ready(
+	function(){
+		jQuery.data(document.body, "token", "38A83B313C6E399929D79624612404F8");
+		
+		var form = $.url().param("form");
+		var rand_hosp = $.url().param("rand_hosp");
+
+		if (day == 1 && form==1) {
+			jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/index.php?pid=1186&event_id=5274&page=pctcna_interview&id=");
+		}
+		else if (day == 2 && form==1) {
+			jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/index.php?pid=1186&event_id=5278&page=pctcna_interview&id=");
+		}
+		else if (day==1 && form==2) {
+			jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/index.php?pid=1186&event_id=5272&page=hospitalist_interview&id=");
+		}
+		else if (day==2 && form==2) {
+			jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/index.php?pid=1186&event_id=5277&page=hospitalist_interview&id=");
+		}
+		else if (day==1 && form==3) {
+			jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/index.php?pid=1186&event_id=5269&page=nurse_interview&id=");
+		}
+		else if (day==2 && form==3) {
+			jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/index.php?pid=1186&event_id=5276&page=nurse_interview&id=");
+		}
+		else {
+			jQuery.data(document.body, "dataEntryUrl", "https://redcap.bidmc.harvard.edu/redcap/redcap_v7.0.10/DataEntry/record_home.php?pid=1186&arm=1&id=");
+		}
+
+		jQuery.data(document.body, "apiUrl", "https://redcap.bidmc.harvard.edu/redcap/api/");
+		
+		var viewModel = new DemographicRecordViewModel();
+		ko.applyBindings(viewModel);
+		jQuery.data(document.body, "viewModel", viewModel);
+				
+		$("#dialog-messages").hide();
+		//$("#tabs").tabs();
+		$("#submit").button();
+		$("#cancel").button();
+		$("#dobpicker").datepicker({
+			onSelect: function(date) {
+				var viewModel = jQuery.data(document.body, "viewModel");
+				viewModel.dob(date);
+	        }
+		});
+
+		var record = $.url().param("record");
+		var event_id = $.url().param("event_id");
+		
+		if (record == null){
+			$( "#dialog-message-record-missing" ).dialog({
+			      modal: true,
+			      height: 300,
+			      width: 500,
+			      buttons: {
+			        OK: function() {
+			            window.history.back();
+					}
+			      }
+			    });
+		}
+		else{
+			viewModel.record_id(record);
+			$("#record_id").attr("disabled","disabled");
+			viewModel.event_id(event_id);
+			$("#event_id").attr("disabled","disabled");
+			
+			viewModel.form(form);
+			$("#form").attr("disabled","disabled");
+			viewModel.rand_hosp(rand_hosp);
+			$("#rand_hosp").attr("disabled","disabled");
+		}
+
+		$("form").submit(function() {
+			var viewModel = jQuery.data(document.body, "viewModel");
+			var xml = viewModel.toXml();
+			var apiUrl = jQuery.data(document.body, "apiUrl");
+			var token  = jQuery.data(document.body, "token");
+			
+			var request = $.post(apiUrl, 
+					  { 
+				  		token: token, 
+				  		content: "record",
+				  		format: "xml",
+				  		type: "flat",
+				  		data: xml
+				  	}
+			  );
+			
+			request.done(function(data, textStatus, jqXHR){ 
+				$("#dialog-message-submit-done").dialog({
+				      modal: true,
+				      buttons: {
+				        Continue: function() {
+							var viewModel = jQuery.data(document.body, "viewModel");
+							var dataEntryUrl = jQuery.data(document.body, "dataEntryUrl");
+				          	
+							window.location = dataEntryUrl + viewModel.record_id();
+				        }
+				      }
+				    });
+			});
+			
+			request.fail(function(jqXHR, textStatus, errorThrown){ 
+				$("#dialog-message-fail-response-text").text(jqXHR.responseText);
+				$("#dialog-message-submit-fail").dialog({
+				      modal: true,
+				      buttons: {
+				        OK: function() {
+				          $( this ).dialog( "close" );
+				        }
+				      }
+				    });				
+			});
+			
+			return false;
+		});
+	});
+
+
+</script>
+
+</head>
+
+<body onclick='myFunction();' 
+	onload="document.getElementById('2').style.display='none'; document.getElementById('3').style.display='none'; document.getElementById('4').style.display='none'; document.getElementById('5').style.display='none'; document.getElementById('6').style.display='none'; document.getElementById('7').style.display='none'; document.getElementById('8').style.display='none'; document.getElementById('9').style.display='none'; document.getElementById('10').style.display='none'; document.getElementById('11').style.display='none'; document.getElementById('12').style.display='none'; document.getElementById('13').style.display='none'; document.getElementById('14').style.display='none'; document.getElementById('15').style.display='none'; document.getElementById('16').style.display='none'; document.getElementById('17').style.display='none'; document.getElementById('18').style.display='none'; document.getElementById('19').style.display='none'; document.getElementById('20').style.display='none'; document.getElementById('21').style.display='none'; document.getElementById('22').style.display='none'; document.getElementById('23').style.display='none'; document.getElementById('24').style.display='none'; document.getElementById('25').style.display='none'; document.getElementById('26').style.display='none'; document.getElementById('contents').style.display='none';  document.getElementById('a3').style.display='none'; document.getElementById('a8').style.display='none'; document.getElementById('aconfirmation').style.display='none'; document.getElementById('bconfirmation').style.display='none'; document.getElementById('c2').style.display='none'; document.getElementById('c7').style.display='none'; document.getElementById('cconfirmation').style.display='none'; document.getElementById('c1').style.display='none'; document.getElementById('c3').style.display='none'; document.getElementById('c4').style.display='none'; document.getElementById('c5').style.display='none'; document.getElementById('c6').style.display='none'; document.getElementById('c8').style.display='none'; document.getElementById('c9').style.display='none'; document.getElementById('c10').style.display='none'; document.getElementById('c10a').style.display='none'; document.getElementById('c11a').style.display='none'; document.getElementById('c11b').style.display='none'; document.getElementById('c12').style.display='none'; document.getElementById('c13').style.display='none'; document.getElementById('c14').style.display='none'; document.getElementById('c15').style.display='none'; document.getElementById('c16').style.display='none'; document.getElementById('c17').style.display='none'; document.getElementById('c18').style.display='none'; document.getElementById('c19').style.display='none'; document.getElementById('c20').style.display='none'; document.getElementById('c21').style.display='none'; document.getElementById('c22').style.display='none'; document.getElementById('contents1').style.display='none';document.getElementById('start').style.display='none'; " 
+	style="font-family:Arial, Helvetica, sans-serif">
+
+<div id="1" style="margin:12%"  onclick="document.getElementById('contents1').style.display='block'; document.getElementById('1').style.display='none';">
+<p class="auto-style10" style="margin: 0%;  unicode-bidi: embed;        vertical-align: middle;">
+<span class="auto-style11">DELIRIUM SCREENING ASSESSMENT</span><br class="auto-style11" /></p>
+	<p class="auto-style8">
+<em>READ: </em>I have some questions about your thinking and memory...
+ </p>
+
+	<p style=" margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:center;direction:ltr;unicode-bidi:embed;">
+	<span style="font-size:8.0pt;color:#438086;">[CAM Copyright 2003, Hospital Elder Life Program, LLC.  Not to be reproduced without permission] Version 4.1</span><span style="font-size:8.0pt;color:#438086;"> </span></p>
+</div>
+
+
+	<fieldset style="margin-bottom:10px">
+			<legend>Record</legend>
+		<label for="record_id">Study ID: </label>
+			<input id="record_id" data-bind="value: record_id" name="record_id" type="text" size="5"/>
+		<label for="event_id">Event ID: </label>
+			<input id="event_id" data-bind="value: event_id" name="event_id" type="text" size="5"/>
+		<label for="form">Form ID: </label>
+			<input id="form" data-bind="value: form" name="form" type="text" size="5"/>
+		<label for="rand_hosp">Randomization ID: </label>
+			<input id="rand_hosp" data-bind="value: rand_hosp" name="rand_hosp" type="text" size="5"/>
+	</fieldset>
+
+	
+	
+<div id="dialog-messages">
+	<div id="dialog-message-record-missing" title="Record Missing">
+	  <p>
+	    <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 50px 0;"></span>
+	    Please Note: The REDCap record number was not supplied to this form.  It is a required field.  
+	  </p>
+	  <p>  
+	    Please enter a data entry session before attempting to access the demographics form  
+	  </p>
+	</div>
+	
+	<div id="dialog-message-submit-done" title="Data Saved">
+	  <p>
+	    <span class="ui-icon ui-icon-circle-check" style="float: left; margin: 0 7px 50px 0;"></span>
+	    The data were successfully saved to the REDCap project.  
+	  </p>
+	</div>
+	
+	<div id="dialog-message-submit-fail" title="Data Saved">
+	  <p>
+	    <span class="ui-icon ui-icon-circle-check" style="float: left; margin: 0 7px 50px 0;"></span>
+	    The data were not successfully saved to the REDCap project.  
+	  </p>
+	  <p>
+	    The REDCap API responded with the response "<span id="dialog-message-fail-response-text">unknown</span>".
+	  </p>  
+	</div>
+</div>
+
+<div id="questions">
+
+<div id="contents1" >
+	<table >
+		<tr style="font-size:xx-large"><td><em>On which interview day is this assessment taking place?</em></td></tr>
+		<tr style="height:25px"><td></td></tr>
+		<tr><td><button name="Abutton1" style="font-size:xx-large" onclick="day = 1; document.getElementById('contents').style.display='block'; document.getElementById('contents1').style.display='none'">Day 1</button></td></tr>
+		<tr style="height:25px"><td></td></tr>
+		<tr><td><button name="Bbutton1" style="font-size:xx-large" onclick="day = 2; document.getElementById('contents').style.display='block'; document.getElementById('contents1').style.display='none'">Day 2</button></td></tr>
+		<tr style="height:25px"><td></td></tr>
+		<tr><td><button style="font-size:xx-large" onclick="day = 3; document.getElementById('contents').style.display='block'; document.getElementById('contents1').style.display='none'">Day 3</button></td></tr>
+	</table>
+</div>	
+
+<div id="contents"><table >
+		<tr style="font-size:xx-large"><td><em>Please choose an interview type: </em></td></tr>
+		<tr style="height:25px"><td></td></tr>
+		<tr><td><button name="Af1" style="font-size:xx-large" onclick="startPageReferral = '1'; document.getElementById('start').style.display = 'block';  document.getElementById('contents').style.display='none'">A. PCT/CNA Interview</button></td></tr>
+		<tr style="height:25px"><td></td></tr>
+		<tr><td><button name="Bf1" style="font-size:xx-large" onclick="startPageReferral = '2'; document.getElementById('start').style.display = 'block'; document.getElementById('contents').style.display='none'">B. Hospitalist/Nurse Interview excluding skip patterns</button></td></tr>
+		<tr style="height:25px"><td></td></tr>
+		<tr><td><button name="Cf1" style="font-size:xx-large" onclick="startPageReferral = '3'; document.getElementById('start').style.display = 'block'; document.getElementById('contents').style.display='none'">C. Hospitalist/Nurse Interview including skip patterns</button></td></tr>
+</table>
+</div>	
+
+<p><div id="start" style="text-align:center;padding:60px 128px;font-size:64px;margin:16px 8px;">Ready?</p><p>
+<button onclick="time0=Date(); 
+		if (startPageReferral=='1') {document.getElementById('a3').style.display='block';} 
+		else if (startPageReferral=='2') {document.getElementById('3').style.display='block';} 
+		else if (startPageReferral=='3') {document.getElementById('c2').style.display='block';} 
+		else {document.getElementById('contents').style.display='block';} 
+		document.getElementById('start').style.display='none'; " 
+	style="text-align:center;padding:60px 128px;font-size:64px;margin:16px 8px;">
+Start
+</button></div></p>
+
+<div id="c2"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('c2').style.display='none'; document.getElementById('contents').style.display='block';">
+	<td style="text-align: right">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" >
+Please tell me the day of the week.  <br />
+</p>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr onclick="time2=Date();">
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var2 = 0; document.getElementById('c7').style.display = 'block'; document.getElementById('c2').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var2 = 1; document.getElementById('c7').style.display = 'block'; document.getElementById('c2').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="c7">
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('c7').style.display='none'; document.getElementById('c2').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('8').style.display='none'; document.getElementById('7').style.display='block'; ">
+Please tell me the months of the year backwards, starting with December.<br />
+<em>[D,N,O,S,A,J,J,M,A,M,F,J] may prompt with “what is month before ….” for up to 2 prompts.</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%">
+	<tr onclick="time7=Date();">
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var7 = 0; if (var2==0) {document.getElementById('cconfirmation').style.display = 'block';} else {document.getElementById('c4').style.display = 'block';} document.getElementById('c7').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var7 = 1; if (var2==1) {document.getElementById('c8').style.display = 'block';} else {document.getElementById('c1').style.display = 'block';}  document.getElementById('c7').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="cconfirmation">
+<p class="auto-style1" style="padding: 0%; margin: 6%;   unicode-bidi: embed;         vertical-align: middle;">
+CAM Summary <br />
+<br />DELIRIUM <span id="cpresent">Negative</span>
+<!--br /><br /><<em onclick="location.reload();">You may close the application at this time.</em>><br /-->
+<form method='post'>	<br /><div style="text-align:center"><input class="button" type="submit" id="submit" value="Upload Patient Data" /></div><br /> </form>
+</p>
+
+</div>
+
+<div id="c1" >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;       vertical-align: middle;"  onclick="document.getElementById('2').style.display='none'; document.getElementById('1').style.display='block';">
+Please tell me the year we are in right now. <br />
+<em>
+</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time1=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var1 = 0; document.getElementById('c3').style.display = 'block'; document.getElementById('c1').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var1 = 1; if (var7==1) {document.getElementById('c8').style.display = 'block';} else {document.getElementById('c4').style.display = 'block';} document.getElementById('c1').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="c3"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('c3').style.display='none'; document.getElementById('c1').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('4').style.display='none'; document.getElementById('3').style.display='block'; " >
+Please tell me what type of place is this?<br />
+<em>[hospital]
+</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time3=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var3 = 0; document.getElementById('c8').style.display = 'block'; document.getElementById('c3').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var3 = 1; document.getElementById('c8').style.display = 'block'; document.getElementById('c3').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="c4"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('5').style.display='none'; document.getElementById('4').style.display='block'; " >
+I'm going to read some numbers. I want you to repeat them in backwards order from the way I read them to you. For instance, if I say “5 – 2”, you would say “2 -5”. OK? The first one is "7-5-1" (1-5-7). <br />
+<em>Say digits one per second.</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time4=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var4 = 0; document.getElementById('c5').style.display = 'block'; document.getElementById('c4').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var4 = 1; document.getElementById('c8').style.display = 'block'; document.getElementById('c4').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="c5"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('c5').style.display='none'; document.getElementById('c4').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('6').style.display='none'; document.getElementById('5').style.display='block'; ">
+The second is "8-2-4-3" (3-4-2-8). <br />
+<em>
+</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time5=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var5 = 0; document.getElementById('c6').style.display = 'block'; document.getElementById('c5').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var5 = 1; document.getElementById('c8').style.display = 'block'; document.getElementById('c5').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="c6"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('c6').style.display='none'; document.getElementById('c5').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('7').style.display='none'; document.getElementById('6').style.display='block'; ">
+Please tell me the days of the week backwards, starting with Saturday.<br />
+<em>[S,F,T,W,T,M,S] may prompt with “what is day before ….” for up to 2 prompts.</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time6=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var6 = 0; document.getElementById('c8').style.display = 'block'; document.getElementById('c6').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var6 = 1; document.getElementById('c8').style.display = 'block'; document.getElementById('c6').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="c8"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('9').style.display='none'; document.getElementById('8').style.display='block'; ">
+During the past day have you felt confused? <br />
+<em>About basic info (i.e. orientation, reason for hospitalization) not details of medical condition/treatment.
+</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time8=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var8 = 0; document.getElementById('c9').style.display = 'block'; document.getElementById('c8').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var8 = 1; if ((var1==1 || var2==1 || var3==1) && (var4==1 || var5==1 || var6==1 || var7==1)) {document.getElementById('26').style.display = 'block';} else if (var1==1 || var2==1 || var3==1) {referral = 'c16'; document.getElementById('c10a').style.display = 'block';} else if (var4==1 || var5==1 || var6==1 || var7==1) {referral = 'c11a'; document.getElementById('c10a').style.display = 'block';} document.getElementById('c8').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="c9"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('c9').style.display='none'; document.getElementById('c8').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('10').style.display='none'; document.getElementById('9').style.display='block'; ">
+During the past day did you think that you were not really in the hospital?<br />
+<em></em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time9=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var9 = 0; document.getElementById('c10').style.display = 'block'; document.getElementById('c9').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var9 = 1; if ((var1==1 || var2==1 || var3==1) && (var4==1 || var5==1 || var6==1 || var7==1)) {document.getElementById('26').style.display = 'block';} else if (var1==1 || var2==1 || var3==1) {referral = 'c16'; document.getElementById('c10a').style.display = 'block';} else if (var4==1 || var5==1 || var6==1 || var7==1) {referral = 'c11a'; document.getElementById('c10a').style.display = 'block';} document.getElementById('c9').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="c10"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('c10').style.display='none'; document.getElementById('c9').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('11').style.display='none'; document.getElementById('10').style.display='block'; ">
+ During the past day did you see things that were not really there? <br />
+<em>
+</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time10=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var10 = 0; if ((var1==1 || var2==1 || var3==1) && (var4==1 || var5==1 || var6==1 || var7==1)) {referral = 'c18'; } else if (var1==1 || var2==1 || var3==1) {referral = 'c16';} else {referral = 'c11a';} document.getElementById('c10a').style.display = 'block'; document.getElementById('c10').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var10 = 1; if ((var1==1 || var2==1 || var3==1) && (var4==1 || var5==1 || var6==1 || var7==1)) {document.getElementById('26').style.display = 'block';} else if (var1==1 || var2==1 || var3==1) {referral = 'c16'; document.getElementById('c10a').style.display = 'block';} else {referral = 'c11a'; document.getElementById('c10a').style.display = 'block';}  document.getElementById('c10').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="c10a"   >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" 
+	onclick="document.getElementById('c10a').style.display='none'; if (referral!='') {document.getElementById(referral).style.display='block';} else {document.getElementById('c11a').style.display='block';} " style="font-size: xx-large; text-align: center;">
+Thank you<br /><br />
+<em >End of patient questions.  Please tap below to advance to ratings.</em> <br /><br /><br />
+<button onclick="document.getElementById('c10a').style.display='none'; if (referral!='') {document.getElementById(referral).style.display='block';} else {document.getElementById('c11a').style.display='block';}" style="font-size: xx-large; text-align: center;">Begin Observation items</button>
+</p>
+</div>
+
+
+<div id="c11a"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Was the patient sleepy during the interview?<br />
+<em>(requires that he/she actually falls asleep, but is easy to arouse)</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time11a=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var11a = 0; document.getElementById('c11b').style.display = 'block'; document.getElementById('c11a').style.display = 'none';" /></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" id="c11a2" name="c11a2" style="width: 100%" type="button" value="Yes" /></td>
+		
+		<script>
+			document.getElementById('c11a2').onclick = function() {
+			var11a = 1;
+				if (var8 == 1 || var9 == 1 || var10 == 1) {
+					document.getElementById('26').style.display = 'block'; 
+				} 
+				else { 
+					document.getElementById('c18').style.display = 'block'; 
+				}
+				document.getElementById('c11a').style.display = 'none';
+			return false;
+			}
+		</script>
+		
+		<td><a href="#" onclick="var11a = 1; if (var8==1 | var9 == 1 | var10 == 1) {document.getElementById('26').style.display = 'block'; document.getElementById('c11a').style.display = 'none';} else {document.getElementById('c18').style.display = 'block'; document.getElementById('c11a').style.display = 'none'; } alert('Some ' + var11a + ' message');">&nbsp;</a></td>
+	</tr>
+	</table>
+</div>
+
+<div id="c11b"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Was the patient stuporous, or comatose during the interview?<br />
+<em>(he/she is difficult to impossible to arouse)
+</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time11b=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var11b = 0; document.getElementById('c12').style.display = 'block'; document.getElementById('c11b').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var11b = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; document.getElementById('c11b').style.display = 'none';} else { document.getElementById('c18').style.display = 'block'; document.getElementById('c11b').style.display = 'none'; }"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="c12"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Did the patient show hypervigilance? <br />
+<em>(having excessively strong responses to ordinary objects/stimuli in the environment, being inappropriately startled)</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time12=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var12 = 0; document.getElementById('c13').style.display = 'block'; document.getElementById('c12').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var12 = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; document.getElementById('c12').style.display = 'none';} else { document.getElementById('c18').style.display = 'block'; document.getElementById('c12').style.display = 'none'; }"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="c13"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Was the patient's flow of ideas unclear or illogical? <br />
+<em>(nonsensical speech, inappropriate answers to questions, contradictory statements or shifting unpredictably from subject to subject)
+</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time13=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var13 = 0; document.getElementById('c14').style.display = 'block'; document.getElementById('c13').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var13 = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; } else { document.getElementById('c18').style.display = 'block';  } document.getElementById('c13').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="c14"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Was the patient's conversation rambling, inappropriately verbose, or tangential?<br />
+<em>(off-target responses or telling a story unrelated to the interview)</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time14=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var14 = 0; document.getElementById('c15').style.display = 'block'; document.getElementById('c14').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var14 = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; } else { document.getElementById('c18').style.display = 'block';  } document.getElementById('c14').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="c15"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Was the patient's speech unusually limited or sparse? <br />
+<em>(inappropriately brief or stereotyped answers)</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time15=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var15 = 0; document.getElementById('26').style.display = 'block'; document.getElementById('c15').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var15 = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; } else { document.getElementById('c18').style.display = 'block';  } document.getElementById('c15').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="c16"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Did the patient have trouble keeping track of what was being said during the interview?<br />
+<em>(repeatedly asking the interviewer to repeat questions)</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time16=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var16 = 0; document.getElementById('c17').style.display = 'block'; document.getElementById('c16').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var16 = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; } else { document.getElementById('c18').style.display = 'block';  } document.getElementById('c16').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="c17"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Did the patient appear inappropriately distracted by environmental stimuli? <br />
+<em>(such as television, people outside the room, roommate's conversations)</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time17=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var17 = 0; document.getElementById('26').style.display = 'block'; document.getElementById('c17').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var17 = 1; if (var8==1 || var9 == 1 || var10 == 1) {document.getElementById('26').style.display = 'block'; } else { document.getElementById('c18').style.display = 'block';  } document.getElementById('c17').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="c18"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Did the patient's level of consciousness fluctuate during the interview? <br />
+<em>(frequently falling asleep for part of the interview, but wide awake for part of the interview)
+</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time18=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var18 = 0; document.getElementById('c19').style.display = 'block'; document.getElementById('c18').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var18 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('c18').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="c19"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Did the patient's level of attention fluctuate during the interview? <br />
+<em>(very inattentive for part of the interview, but attentive for part of the interview--Note: just getting some questions correct and others incorrect is insufficient to code this feature)
+</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time19=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var19 = 0; document.getElementById('c20').style.display = 'block'; document.getElementById('c19').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var19 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('c19').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="c20"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Did the patient's speech/thinking fluctuate during the interview? <br />
+<em>(speaks very slowly during part of the interview then very fast, or speech was coherent for part of the interview and then nonsensical)
+</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time20=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var20 = 0; if (day==2 || day==3) {document.getElementById('c22').style.display = 'block'; } else if (day==1) {document.getElementById('c21').style.display = 'block'; } else {document.getElementById('c21').style.display = 'block';}  document.getElementById('c20').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var20 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('c20').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="c21"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Consult the medical record or contact a family member, friend, or health care provider who knows the patient well to find out if the patient is experiencing an acute change. "Is the patient experiencing an acute change in their memory or thinking?”<br />
+<em>
+</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time21=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var21 = 0; if (day==2 || day==3) {document.getElementById('c22').style.display = 'block'; } else {document.getElementById('26').style.display = 'block'; } document.getElementById('c21').style.display = 'none';"/>
+		</td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var21 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('c21').style.display = 'none';"/>
+		</td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="c22"  style="font-size:xx-large">
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr>
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+
+ 
+ <div class="button"><button id="send" class="button">Click to access database for prior assessment</button></div>
+
+ <p id="tabledata"></p>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" id="c22T">
+<br />
+<em>Please review previous assessment to determine acute change</em><br />
+ </p>
+
+<script>
+$(document).ready(function(){
+    $("#send").click(function(){
+		if ($.url().param("form")==2) {
+		var rerds = $.url().param("record");
+	    var requestc22 = $.post("https://redcap.bidmc.harvard.edu/redcap/api/",
+        {
+          token: "38A83B313C6E399929D79624612404F8",
+          content: "record", 
+          format: "json", type: "flat", records: rerds, fields: "b2, b1, b3, b4, b5, b6, b7, b8, b9, b10, b11a, b11b, b12, b13, b14, b15, b16, b17, b18, b19, b20, b21", 
+          events: "hd1_hospitalist_in_arm_1", rawOrLabel: "raw", 
+          rawOrLabelHeaders: "raw", exportCheckboxLabel: "false", 
+          exportSurveyFields: "false", exportDataAccessGroups: "false", 
+          returnFormat: "json"
+        },
+        function(data,status){
+			document.getElementById("tabledata").innerHTML = "<em>Contacting REDCap for previous 3D-CAM Ratings...</em><b>" + status + ".</b>" ;
+			document.getElementById('send').style.display = 'none';
+			if (status == "success") {
+				document.getElementById('c22T').style.color = "white";
+				if (var1 > data[0].b1 || var2 > data[0].b2 || var3 > data[0].b3 || var4 > data[0].b4 || var5 > data[0].b5 || var6 > data[0].b6 || var7 > data[0].b7 || var8 > data[0].b8 || var9 > data[0].b9 || var10 > data[0].b10 || var11a > data[0].b11a || var11b > data[0].b11b || var12 > data[0].b12 || var13 > data[0].b13 || var14 > data[0].b14 || var15 > data[0].b15 || var16 > data[0].b16 || var17 > data[0].b17 || var18 > data[0].b18 || var19 > data[0].b19 || var20 > data[0].b20 || var21 > data[0].b21) {
+					document.getElementById('c22Y').style.display = 'block';
+				}
+				else if (var1 <= data[0].b1 && var2 <= data[0].b2 && var3 <= data[0].b3 && var4 <= data[0].b4 && var5 <= data[0].b5 && var6 <= data[0].b6 && var7 <= data[0].b7 && var8 <= data[0].b8 && var9 <= data[0].b9 && var10 <= data[0].b10 && var11a <= data[0].b11a && var11b <= data[0].b11b && var12 <= data[0].b12 && var13 <= data[0].b13 && var14 <= data[0].b14 && var15 <= data[0].b15 && var16 <= data[0].b16  && var17 <= data[0].b17 && var18 <= data[0].b18 && var19 <= data[0].b19 && var20 <= data[0].b20 && var21 <= data[0].b21) {
+					document.getElementById('c22N').style.display = 'block';
+				}
+			}
+			else if (status != "success") {
+			}
+        })};
+		
+		if ($.url().param("form")==3) {
+		var rerds = $.url().param("record");
+	    var requestc22 = $.post("https://redcap.bidmc.harvard.edu/redcap/api/",
+        {
+          token: "38A83B313C6E399929D79624612404F8",
+          content: "record", 
+          format: "json", type: "flat", records: rerds, fields: "n2, n1, n3, n4, n5, n6, n7, n8, n9, n10, n11a, n11b, n12, n13, n14, n15, n16, n17, n18, n19, n20, n21", 
+          events: "hd1_nurse_intervie_arm_1", rawOrLabel: "raw", 
+          rawOrLabelHeaders: "raw", exportCheckboxLabel: "false", 
+          exportSurveyFields: "false", exportDataAccessGroups: "false", 
+          returnFormat: "json"
+        },
+        function(data,status){
+			document.getElementById("tabledata").innerHTML = "<em>Contacting REDCap for previous 3D-CAM Ratings...</em><b>" + status + ".</b>" ;
+			document.getElementById('send').style.display = 'none';
+			if (status == "success") {
+				document.getElementById('c22T').style.color = "white";
+				if (var1 > data[0].n1 || var2 > data[0].n2 || var3 > data[0].n3 || var4 > data[0].n4 || var5 > data[0].n5 || var6 > data[0].n6 || var7 > data[0].n7 || var8 > data[0].n8 || var9 > data[0].n9 || var10 > data[0].n10 || var11a > data[0].n11a || var11b > data[0].n11b || var12 > data[0].n12 || var13 > data[0].n13 || var14 > data[0].n14 || var15 > data[0].n15 || var16 > data[0].n16 || var17 > data[0].n17 || var18 > data[0].n18 || var19 > data[0].n19 || var20 > data[0].n20 || var21 > data[0].n21) {
+					document.getElementById('c22Y').style.display = 'block';
+				}
+				else if (var1 <= data[0].n1 && var2 <= data[0].n2 && var3 <= data[0].n3 && var4 <= data[0].n4 && var5 <= data[0].n5 && var6 <= data[0].n6 && var7 <= data[0].n7 && var8 <= data[0].n8 && var9 <= data[0].n9 && var10 <= data[0].n10 && var11a <= data[0].n11a && var11b <= data[0].n11b && var12 <= data[0].n12 && var13 <= data[0].n13 && var14 <= data[0].n14 && var15 <= data[0].n15 && var16 <= data[0].n16  && var17 <= data[0].n17 && var18 <= data[0].n18 && var19 <= data[0].n19 && var20 <= data[0].n20 && var21 <= data[0].n21) {
+					document.getElementById('c22N').style.display = 'block';
+				}
+			}
+			else if (status != "success") {
+			}
+        })};		
+		
+    });
+});
+</script>
+
+<table style="width: 100%" onclick="time22=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" id="c22N" style="width: 100%; display: none;" type="button" value="No new positive items detected" onclick="var22 = 0; document.getElementById('26').style.display = 'block'; document.getElementById('c22').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" id="c22Y" style="width: 100%; display: none;" type="button" value="One or more new positive items detected" onclick="var22 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('c22').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+
+<div id="a3"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('a3').style.display='none'; document.getElementById('contents').style.display='block';">
+		<td>◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" >
+Please tell me the day of the week.  <br />
+</p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time2=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<div id="var2">
+		<input class="auto-style7" id="var2_0" data-bind="checked: var2" name="var2Group" style="width: 100%" type="button" value="Correct" onclick="var2 = 0; document.getElementById('a8').style.display = 'block'; document.getElementById('a3').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" id="var2_1" data-bind="checked: var2" name="var2Group" style="width: 100%" type="button" value="Incorrect" onclick="var2 = 1; document.getElementById('a8').style.display = 'block'; document.getElementById('a3').style.display = 'none';"/>
+		</div>
+		</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+
+<div id="a8"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('a8').style.display='none'; document.getElementById('a3').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('8').style.display='none'; document.getElementById('7').style.display='block'; ">
+Please tell me the months of the year backwards, starting with December.<br />
+<em>[D,N,O,S,A,J,J,M,A,M,F,J] may prompt with “what is month before ….” for up to 2 prompts.</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time7=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var7 = 0; document.getElementById('aconfirmation').style.display = 'block'; document.getElementById('a8').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var7 = 1; document.getElementById('aconfirmation').style.display = 'block'; document.getElementById('a8').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<form method="post">
+<div id="aconfirmation">
+<p class="auto-style1" style="padding: 0%; margin: 6%;   unicode-bidi: embed;         vertical-align: middle;">
+CAM Summary <br />
+<br />2-item screener 
+	<span id="apresent">Negative</span>
+	<!--br /><br /><em onclick="location.reload(true);">You may exit the application.</em><br /-->
+	<div style="text-align:center"><br /><input class="button" type="submit" id="submit" value="Upload Patient Data" /><br /></div>
+</p>
+	
+</div></form>
+
+</div>
+
+<div id="3"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('3').style.display='none'; document.getElementById('contents').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('3').style.display='none'; document.getElementById('2').style.display='block'; ">
+Please tell me the day of the week.  <br />
+<em>
+</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time2=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var2 = 0; document.getElementById('8').style.display = 'block'; document.getElementById('3').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var2 = 1; document.getElementById('8').style.display = 'block'; document.getElementById('3').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="8">
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('8').style.display='none'; document.getElementById('3').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('8').style.display='none'; document.getElementById('7').style.display='block'; ">
+Please tell me the months of the year backwards, starting with December.<br />
+<em>[D,N,O,S,A,J,J,M,A,M,F,J] may prompt with “what is month before ….” for up to 2 prompts.</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time7=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var7 = 0; if (var2==0) {document.getElementById('bconfirmation').style.display = 'block';} else {document.getElementById('2').style.display = 'block';}  document.getElementById('8').style.display = 'none'; form = 2; "/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var7 = 1; document.getElementById('2').style.display = 'block'; document.getElementById('8').style.display = 'none'; form = 2; "/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="bconfirmation">
+<p class="auto-style1" style="padding: 0%; margin: 6%;   unicode-bidi: embed;         vertical-align: middle;">
+CAM Summary <br />
+<br />DELIRIUM <span id="bpresent">Negative</span>
+<!--br /><br /><em onclick="location.reload();">You may close the application at this time.</em><br /-->
+<form method="post">
+	<span class="auto-style1" ><br /><div style="text-align:center"><input class="button" type="submit" id="submit" value="Upload Patient Data" /></div><br /></span>
+</form>
+</p>
+
+
+</div>
+<div id="2" >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('2').style.display='none'; document.getElementById('bconfirmation').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;       vertical-align: middle;"  >
+Please tell me the year we are in right now. <br />
+<em>
+</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time1=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var1 = 0; document.getElementById('4').style.display = 'block'; document.getElementById('2').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var1 = 1; document.getElementById('4').style.display = 'block'; document.getElementById('2').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="4"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('4').style.display='none'; document.getElementById('2').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" >
+Please tell me what type of place is this?<br />
+<em>[hospital]
+</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time3=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var3 = 0; document.getElementById('5').style.display = 'block'; document.getElementById('4').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var3 = 1; document.getElementById('5').style.display = 'block'; document.getElementById('4').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="5"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('5').style.display='none'; document.getElementById('4').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" >
+I am going to read some numbers. I want you to repeat them in backwards order from the way I read them to you. For instance, if I say “5 – 2”, you would say “2 -5”. OK? The first one is "7-5-1" (1-5-7). <br />
+<em>Say digits one per second.</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time4=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var4 = 0; document.getElementById('6').style.display = 'block'; document.getElementById('5').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var4 = 1; document.getElementById('6').style.display = 'block'; document.getElementById('5').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="6"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('6').style.display='none'; document.getElementById('5').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" >
+The second is "8-2-4-3" (3-4-2-8). <br />
+<em>
+</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time5=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var5 = 0; document.getElementById('7').style.display = 'block'; document.getElementById('6').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var5 = 1; document.getElementById('7').style.display = 'block'; document.getElementById('6').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="7"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('7').style.display='none'; document.getElementById('6').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" >
+Please tell me the days of the week backwards, starting with Saturday.<br />
+<em>[S,F,T,W,T,M,S] may prompt with “what is day before ….” for up to 2 prompts.</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time6=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="Correct" onclick="var6 = 0; document.getElementById('9').style.display = 'block'; document.getElementById('7').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Incorrect" onclick="var6 = 1; document.getElementById('9').style.display = 'block'; document.getElementById('7').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="9"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('9').style.display='none'; document.getElementById('7').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('9').style.display='none'; document.getElementById('8').style.display='block'; ">
+During the past day have you felt confused? <br />
+<em>About basic info (i.e. orientation, reason for hospitalization) not details of medical condition/treatment.
+</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time8=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var8 = 0; document.getElementById('10').style.display = 'block'; document.getElementById('9').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var8 = 1; document.getElementById('10').style.display = 'block'; document.getElementById('9').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="10"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('10').style.display='none'; document.getElementById('9').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('10').style.display='none'; document.getElementById('9').style.display='block'; ">
+During the past day did you think that you were not really in the hospital?<br />
+<em></em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time9=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var9 = 0; document.getElementById('11').style.display = 'block'; document.getElementById('10').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var9 = 1; document.getElementById('11').style.display = 'block'; document.getElementById('10').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="11"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('11').style.display='none'; document.getElementById('10').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('11').style.display='none'; document.getElementById('10').style.display='block'; ">
+ During the past day did you see things that were not really there? <br />
+<em>
+</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time10=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var10 = 0; document.getElementById('12').style.display = 'block'; document.getElementById('11').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:40%">
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var10 = 1; document.getElementById('12').style.display = 'block'; document.getElementById('11').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		<td style="font-size:xx-large;"><em>(includes "don't know", non-response, and nonsensical responses)</em></td>
+	<td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div id="12"   >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('12').style.display='none'; document.getElementById('11').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" onclick="document.getElementById('13').style.display = 'block'; document.getElementById('12').style.display = 'none';">
+Thank you<br /></p>
+<p onclick="document.getElementById('13').style.display = 'block'; document.getElementById('12').style.display = 'none';" style="font-size: xx-large; text-align: center;"><em >End of patient questions.  Please tap below to advance to ratings.
+</em><br /><br /><button onclick="document.getElementById('13').style.display = 'block'; document.getElementById('12').style.display = 'none';" style="font-size: xx-large; text-align: center;">Begin Observation items</button>
+</p>
+</div>
+
+<div id="13"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('13').style.display='none'; document.getElementById('12').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Was the patient sleepy during the interview?<br />
+<em>(requires that he/she actually falls asleep, but is easy to arouse)</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time11a=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var11a = 0; document.getElementById('14').style.display = 'block'; document.getElementById('13').style.display = 'none';" /></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var11a = 1; document.getElementById('14').style.display = 'block'; document.getElementById('13').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="14"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('14').style.display='none'; document.getElementById('13').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Was the patient stuporous, or comatose during the interview?<br />
+<em>(he/she is difficult to impossible to arouse)
+</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time11b=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var11b = 0; document.getElementById('15').style.display = 'block'; document.getElementById('14').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var11b = 1; document.getElementById('15').style.display = 'block'; document.getElementById('14').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="15"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('15').style.display='none'; document.getElementById('14').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Did the patient show hypervigilance? <br />
+<em>(having excessively strong responses to ordinary objects/stimuli in the environment, being inappropriately startled)</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time12=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var12 = 0; document.getElementById('16').style.display = 'block'; document.getElementById('15').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var12 = 1; document.getElementById('16').style.display = 'block'; document.getElementById('15').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="16"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('16').style.display='none'; document.getElementById('15').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Was the patient's flow of ideas unclear or illogical? <br />
+<em>(nonsensical speech, inappropriate answers to questions, contradictory statements or shifting unpredictably from subject to subject)
+</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time13=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var13 = 0; document.getElementById('17').style.display = 'block'; document.getElementById('16').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var13 = 1; document.getElementById('17').style.display = 'block'; document.getElementById('16').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="17"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('17').style.display='none'; document.getElementById('16').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Was the patient's conversation rambling, inappropriately verbose, or tangential?<br />
+<em>(off-target responses or telling a story unrelated to the interview)</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time14=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var14 = 0; document.getElementById('18').style.display = 'block'; document.getElementById('17').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var14 = 1; document.getElementById('18').style.display = 'block'; document.getElementById('17').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="18"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('18').style.display='none'; document.getElementById('17').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Was the patient's speech unusually limited or sparse? <br />
+<em>(inappropriately brief or stereotyped answers)</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time15=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var15 = 0; document.getElementById('19').style.display = 'block'; document.getElementById('18').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var15 = 1; document.getElementById('19').style.display = 'block'; document.getElementById('18').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="19"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('19').style.display='none'; document.getElementById('18').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Did the patient have trouble keeping track of what was being said during the interview?<br />
+<em>(repeatedly asking the interviewer to repeat questions)</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time16=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var16 = 0; document.getElementById('20').style.display = 'block'; document.getElementById('19').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var16 = 1; document.getElementById('20').style.display = 'block'; document.getElementById('19').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="20"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('20').style.display='none'; document.getElementById('19').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Did the patient appear inappropriately distracted by environmental stimuli? <br />
+<em>(such as television, people outside the room, roommate's conversations)
+</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time17=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var17 = 0; document.getElementById('21').style.display = 'block'; document.getElementById('20').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var17 = 1; document.getElementById('21').style.display = 'block'; document.getElementById('20').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="21"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('21').style.display='none'; document.getElementById('20').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Did the patient's level of consciousness fluctuate during the interview? <br />
+<em>(frequently falling asleep for part of the interview, but wide awake for part of the interview)
+</em> </p>
+
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time18=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var18 = 0; document.getElementById('22').style.display = 'block'; document.getElementById('21').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var18 = 1; document.getElementById('22').style.display = 'block'; document.getElementById('21').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="22"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('22').style.display='none'; document.getElementById('21').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Did the patient's level of attention fluctuate during the interview? <br />
+<em>(very inattentive for part of the interview, but attentive for part of the interview--Note: just getting some questions correct and others incorrect is insufficient to code this feature)
+</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time19=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var19 = 0; document.getElementById('23').style.display = 'block'; document.getElementById('22').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var19 = 1; document.getElementById('23').style.display = 'block'; document.getElementById('22').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="23"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('23').style.display='none'; document.getElementById('22').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Did the patient's speech/thinking fluctuate during the interview? <br />
+<em>(speaks very slowly during part of the interview then very fast, or speech was coherent for part of the interview and then nonsensical)
+</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time20=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var20 = 0; if ((var8==0 && var9==0 && var10==0 && var18==0 && var19==0) && (var4==1 || var5==1 || var6==1 || var7==1 || var16==1 || var17==1) && (var1==1 || var2==1 || var3==1 || var11a==1 || var11b==1 || var12==1 || var13==1 || var14==1 || var15==1) && (day==1)) {document.getElementById('24').style.display = 'block';} else if ((var8==0 && var9==0 && var10==0 && var18==0 && var19==0) && (var4==1 || var5==1 || var6==1 || var7==1 || var16==1 || var17==1) && (var1==1 || var2==1 || var3==1 || var11a==1 || var11b==1 || var12==1 || var13==1 || var14==1 || var15==1) && (day==2 || day==3)) {document.getElementById('25').style.display = 'block';} else {document.getElementById('26').style.display = 'block';} document.getElementById('23').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var20 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('23').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="24"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('24').style.display='none'; document.getElementById('23').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;">
+Consult the medical record or contact a family member, friend, or health care provider who knows the patient well to find out if the patient is experiencing an acute change. "Is the patient experiencing an acute change in their memory or thinking?”<br />
+<em>
+</em> </p>
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time21=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input class="auto-style7" name="Button1" style="width: 100%" type="button" value="No" onclick="var21 = 0; if (day==2 || day==3) { document.getElementById('25').style.display = 'block';} else {document.getElementById('26').style.display = 'block';} document.getElementById('24').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input class="auto-style4" name="Button2" style="width: 100%" type="button" value="Yes" onclick="var21 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('24').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="25"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('25').style.display='none'; document.getElementById('24').style.display='block';">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+
+ <div class="button"><button id="sendb" class="button">Click to access database for prior assessment</button></div>
+ 
+ <p id="tabledatab"></p>
+<p class="auto-style1" style="padding: 0%; margin: 0%;   unicode-bidi: embed;         vertical-align: middle;" id="b22T">
+<br />
+<em>Please review previous assessment to determine acute change</em><br />
+ </p>
+
+<script>
+$(document).ready(function(){
+    $("#sendb").click(function(){
+		if ($.url().param("form")==2) {
+		var rerds = $.url().param("record");
+	    var requestc22 = $.post("https://redcap.bidmc.harvard.edu/redcap/api/",
+        {
+          token: "38A83B313C6E399929D79624612404F8",
+          content: "record", 
+          format: "json", type: "flat", records: rerds, fields: "b2, b1, b3, b4, b5, b6, b7, b8, b9, b10, b11a, b11b, b12, b13, b14, b15, b16, b17, b18, b19, b20, b21", 
+          events: "hd1_hospitalist_in_arm_1", rawOrLabel: "raw", 
+          rawOrLabelHeaders: "raw", exportCheckboxLabel: "false", 
+          exportSurveyFields: "false", exportDataAccessGroups: "false", 
+          returnFormat: "json"
+        },
+        function(data,status){
+			document.getElementById("tabledatab").innerHTML = "<em>Contacting REDCap for previous 3D-CAM Ratings...</em><b>" + status + ".</b>" ;
+			document.getElementById('sendb').style.display = 'none';
+			if (status == "success") {
+				document.getElementById('b22T').style.color = "white";
+				if (var1 > data[0].b1 || var2 > data[0].b2 || var3 > data[0].b3 || var4 > data[0].b4 || var5 > data[0].b5 || var6 > data[0].b6 || var7 > data[0].b7 || var8 > data[0].b8 || var9 > data[0].b9 || var10 > data[0].b10 || var11a > data[0].b11a || var11b > data[0].b11b || var12 > data[0].b12 || var13 > data[0].b13 || var14 > data[0].b14 || var15 > data[0].b15 || var16 > data[0].b16 || var17 > data[0].b17 || var18 > data[0].b18 || var19 > data[0].b19 || var20 > data[0].b20 || var21 > data[0].b21) {
+					document.getElementById('b22Y').style.display = 'block';
+				}
+				else if (var1 <= data[0].b1 && var2 <= data[0].b2 && var3 <= data[0].b3 && var4 <= data[0].b4 && var5 <= data[0].b5 && var6 <= data[0].b6 && var7 <= data[0].b7 && var8 <= data[0].b8 && var9 <= data[0].b9 && var10 <= data[0].b10 && var11a <= data[0].b11a && var11b <= data[0].b11b && var12 <= data[0].b12 && var13 <= data[0].b13 && var14 <= data[0].b14 && var15 <= data[0].b15 && var16 <= data[0].b16  && var17 <= data[0].b17 && var18 <= data[0].b18 && var19 <= data[0].b19 && var20 <= data[0].b20 && var21 <= data[0].b21) {
+					document.getElementById('b22N').style.display = 'block';
+				}
+			}
+			else if (status != "success") {
+			}
+        })};
+		
+		if ($.url().param("form")==3) {
+		var rerds = $.url().param("record");
+	    var requestc22 = $.post("https://redcap.bidmc.harvard.edu/redcap/api/",
+        {
+          token: "38A83B313C6E399929D79624612404F8",
+          content: "record", 
+          format: "json", type: "flat", records: rerds, fields: "n2, n1, n3, n4, n5, n6, n7, n8, n9, n10, n11a, n11b, n12, n13, n14, n15, n16, n17, n18, n19, n20, n21", 
+          events: "hd1_nurse_intervie_arm_1", rawOrLabel: "raw", 
+          rawOrLabelHeaders: "raw", exportCheckboxLabel: "false", 
+          exportSurveyFields: "false", exportDataAccessGroups: "false", 
+          returnFormat: "json"
+        },
+        function(data,status){
+			document.getElementById("tabledatab").innerHTML = "<em>Contacting REDCap for previous 3D-CAM Ratings...</em><b>" + status + ".</b>" ;
+			document.getElementById('sendb').style.display = 'none';
+			if (status == "success") {
+				document.getElementById('b22T').style.color = "white";
+				if (var1 > data[0].n1 || var2 > data[0].n2 || var3 > data[0].n3 || var4 > data[0].n4 || var5 > data[0].n5 || var6 > data[0].n6 || var7 > data[0].n7 || var8 > data[0].n8 || var9 > data[0].n9 || var10 > data[0].n10 || var11a > data[0].n11a || var11b > data[0].n11b || var12 > data[0].n12 || var13 > data[0].n13 || var14 > data[0].n14 || var15 > data[0].n15 || var16 > data[0].n16 || var17 > data[0].n17 || var18 > data[0].n18 || var19 > data[0].n19 || var20 > data[0].n20 || var21 > data[0].n21) {
+					document.getElementById('b22Y').style.display = 'block';
+				}
+				else if (var1 <= data[0].n1 && var2 <= data[0].n2 && var3 <= data[0].n3 && var4 <= data[0].n4 && var5 <= data[0].n5 && var6 <= data[0].n6 && var7 <= data[0].n7 && var8 <= data[0].n8 && var9 <= data[0].n9 && var10 <= data[0].n10 && var11a <= data[0].n11a && var11b <= data[0].n11b && var12 <= data[0].n12 && var13 <= data[0].n13 && var14 <= data[0].n14 && var15 <= data[0].n15 && var16 <= data[0].n16  && var17 <= data[0].n17 && var18 <= data[0].n18 && var19 <= data[0].n19 && var20 <= data[0].n20 && var21 <= data[0].n21) {
+					document.getElementById('b22N').style.display = 'block';
+				}
+			}
+			else if (status != "success") {
+			}
+        })};		
+		
+    });
+	
+});
+</script> 
+ 
+<p>&nbsp;</p>
+<table style="width: 100%" onclick="time22=Date();">
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+		<input id="b22N" class="auto-style7" name="Button1" style="width: 100%; display: none" type="button" value="No new positive items detected" onclick="var22 = 0; document.getElementById('26').style.display = 'block'; document.getElementById('25').style.display = 'none';"/></td>
+		<td style="width:200px">&nbsp;</td>
+		<td>
+		<input id="b22Y" class="auto-style4" name="Button2" style="width: 100%; display: none" type="button" value="One or more new positive items detected" onclick="var22 = 1; document.getElementById('26').style.display = 'block'; document.getElementById('25').style.display = 'none';"/></td>
+		<td>&nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+<div id="26"  >
+<table class="auto-style3" style="width: 100%; margin-bottom:50px">
+	<tr onclick="document.getElementById('26').style.display='none'; location.reload();">
+		<td onclick="myFunction()">◀</td>
+	</tr>
+</table>
+<p class="auto-style1" style="padding: 0%; margin: 6%;   unicode-bidi: embed;         vertical-align: middle;">
+CAM Summary <br />
+<br />DELIRIUM <span id="present">Negative</span></p>
+<table style="width: 100%">
+	<tr>
+		<td class="auto-style5" colspan="1" id="f0">Feature summary:</td>
+		<td class="auto-style5" colspan="1" id="f1">Feature 1 not present</td>
+		<td class="auto-style5" colspan="1" id="f2">Feature 2 not present</td>
+		<td class="auto-style5" colspan="1" id="f3">Feature 3 not present</td>
+		<td class="auto-style5" colspan="1" id="f4">Feature 4 not present</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+
+<form method="post">
+	<br /><br /><div style="text-align:center"><input class="button" type="submit" id="submit" value="Upload Patient Data" /></div><br />
+</form>
+
+</div>
+
+
+</div>
+</body>
+
+</html>
